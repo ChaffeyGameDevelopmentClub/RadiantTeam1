@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyipjrkwmoy41"]
+
+[ext_resource type="Texture2D" uid="uid://bv8n14vau84oh" path="res://keyssprite.png" id="1_w43i5"]
+[ext_resource type="Script" path="res://RandomSprite.gd" id="2_v775k"]
+
+[node name="Keys" type="Sprite2D"]
+position = Vector2(394.244, 150.439)
+scale = Vector2(0.385039, 0.423742)
+texture = ExtResource("1_w43i5")
+region_enabled = true
+region_rect = Rect2(0, 0, 280, 280)
+script = ExtResource("2_v775k")
