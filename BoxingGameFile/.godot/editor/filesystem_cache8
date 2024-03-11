@@ -1,0 +1,15 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1710108479
+blackbar.png::CompressedTexture2D::3940215946452265396::1710034012::1710034012::1::::<><>::
+boxingbagsprite.jpg::CompressedTexture2D::1267500985793244612::1710022111::1710022111::1::::<><>::
+BoxingMG.tscn::PackedScene::2037361199442589684::1710055455::0::1::::<><>::uid://sb8s52cbpafs::::res://boxingbagsprite.jpg<>uid://cyipjrkwmoy41::::res://RandomSprite.tscn<>res://SkillCheck.gd<>uid://bhumajjl1f8sj::::res://red.png<>uid://dwktwom5rtvyl::::res://puncheffect.png<>uid://bwew1s2ccgteq::::res://blackbar.png
+CleanRoom.tscn::PackedScene::1544561191547074187::1710055455::0::1::::<><>::res://Furniture1.gd<>uid://sb8s52cbpafs::::res://boxingbagsprite.jpg
+Furniture1.gd::GDScript::-1::1710050133::0::1::::<>CharacterBody2D<>::
+keyssprite.png::CompressedTexture2D::3929348173169349727::1710023344::1710023344::1::::<><>::
+progress_bar.tscn::PackedScene::6375557899107986960::1710036721::0::1::::<><>::res://ProgressBar.gd
+puncheffect.png::CompressedTexture2D::8725254054236191223::1710045984::1710045959::1::::<><>::
+RandomSprite.gd::GDScript::-1::1710031255::0::1::::<>Sprite2D<>::
+RandomSprite.tscn::PackedScene::6474816373129289540::1710045917::0::1::::<><>::uid://bv8n14vau84oh::::res://keyssprite.png<>res://RandomSprite.gd
+rec.gd::GDScript::-1::1710033022::0::1::::<>Sprite2D<>::
+red.png::CompressedTexture2D::2919759235301881561::1710032884::1710032884::1::::<><>::
+SkillCheck.gd::GDScript::-1::1710050223::0::1::::<>Area2D<>::

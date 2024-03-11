@@ -1,0 +1,13 @@
+res://BoxingMG.tscn
+res://RandomSprite.tscn
+res://ProgressBarBox.gd
+res://RandomSprite.gd
+res://ProgressBar.gd
+res://progress_bar.tscn
+res://Move.gd
+res://rec.gd
+res://Moving.gd
+res://matchup.gd
+res://SkillCheck.gd
+res://Furniture1.gd
+res://CleanRoom.tscn
