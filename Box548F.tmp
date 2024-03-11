@@ -1,63 +1,54 @@
-<<<<<<< Updated upstream
-[gd_scene load_steps=19 format=3 uid="uid://bf5hap0rv8vqa"]
+[gd_scene load_steps=20 format=3 uid="uid://4a6bny723kuu"]
 
-[ext_resource type="Texture2D" path="res://BoxingGame/boxingbagsprite.jpg" id="1_g3pup"]
-[ext_resource type="Script" path="res://SkillCheck.gd" id="3_5idga"]
-[ext_resource type="Texture2D" path="res://BoxingGame/puncheffect.png" id="4_pjnkb"]
-[ext_resource type="Texture2D" path="res://BoxingGame/red.png" id="5_kvsgw"]
-[ext_resource type="Texture2D" path="res://BoxingGame/blackbar.png" id="6_kob4j"]
-=======
-[gd_scene load_steps=19 format=3 uid="uid://4a6bny723kuu"]
-
-[ext_resource type="Texture2D" uid="uid://sb8s52cbpafs" path="res://BoxingGame/boxingbagsprite.jpg" id="1_g3pup"]
-[ext_resource type="Script" path="res://SkillCheck.gd" id="3_5idga"]
-[ext_resource type="Texture2D" uid="uid://dwktwom5rtvyl" path="res://BoxingGame/puncheffect.png" id="4_pjnkb"]
-[ext_resource type="Texture2D" uid="uid://bhumajjl1f8sj" path="res://BoxingGame/red.png" id="5_kvsgw"]
-[ext_resource type="Texture2D" uid="uid://bwew1s2ccgteq" path="res://BoxingGame/blackbar.png" id="6_kob4j"]
->>>>>>> Stashed changes
+[ext_resource type="Texture2D" uid="uid://sb8s52cbpafs" path="res://boxingbagsprite.jpg" id="1_gvecn"]
+[ext_resource type="PackedScene" uid="uid://cyipjrkwmoy41" path="res://RandomSprite.tscn" id="3_jxeoq"]
+[ext_resource type="Script" path="res://SkillCheck.gd" id="4_eic20"]
+[ext_resource type="Texture2D" uid="uid://bhumajjl1f8sj" path="res://red.png" id="5_kscu3"]
+[ext_resource type="Texture2D" uid="uid://dwktwom5rtvyl" path="res://puncheffect.png" id="6_5gdi7"]
+[ext_resource type="Texture2D" uid="uid://bwew1s2ccgteq" path="res://blackbar.png" id="6_lvhq1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8kmtd"]
 radius = 85.0159
 height = 380.204
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5dan2"]
-atlas = ExtResource("4_pjnkb")
+atlas = ExtResource("6_5gdi7")
 region = Rect2(0, 0, 71, 71)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_umybr"]
-atlas = ExtResource("4_pjnkb")
+atlas = ExtResource("6_5gdi7")
 region = Rect2(71, 0, 71, 71)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ckp6l"]
-atlas = ExtResource("4_pjnkb")
+atlas = ExtResource("6_5gdi7")
 region = Rect2(142, 0, 71, 71)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1bkw1"]
-atlas = ExtResource("4_pjnkb")
+atlas = ExtResource("6_5gdi7")
 region = Rect2(213, 0, 71, 71)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o5oj1"]
-atlas = ExtResource("4_pjnkb")
+atlas = ExtResource("6_5gdi7")
 region = Rect2(284, 0, 71, 71)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mux2m"]
-atlas = ExtResource("4_pjnkb")
+atlas = ExtResource("6_5gdi7")
 region = Rect2(0, 71, 71, 71)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1laih"]
-atlas = ExtResource("4_pjnkb")
+atlas = ExtResource("6_5gdi7")
 region = Rect2(71, 71, 71, 71)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nypyl"]
-atlas = ExtResource("4_pjnkb")
+atlas = ExtResource("6_5gdi7")
 region = Rect2(142, 71, 71, 71)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f8kg2"]
-atlas = ExtResource("4_pjnkb")
+atlas = ExtResource("6_5gdi7")
 region = Rect2(213, 71, 71, 71)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2wurl"]
-atlas = ExtResource("4_pjnkb")
+atlas = ExtResource("6_5gdi7")
 region = Rect2(284, 71, 71, 71)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_p8txx"]
@@ -119,7 +110,7 @@ color = Color(0.639216, 0.14902, 0.203922, 1)
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(157, 126)
 scale = Vector2(0.508013, 0.465812)
-texture = ExtResource("1_g3pup")
+texture = ExtResource("1_gvecn")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
 visible = false
@@ -129,8 +120,11 @@ visible = false
 position = Vector2(0.825397, 50.654)
 shape = SubResource("CapsuleShape2D_8kmtd")
 
+[node name="RandomSprite" parent="." instance=ExtResource("3_jxeoq")]
+visible = false
+
 [node name="SkillCheck" type="Area2D" parent="."]
-script = ExtResource("3_5idga")
+script = ExtResource("4_eic20")
 
 [node name="puncheffect" type="AnimatedSprite2D" parent="SkillCheck"]
 visible = false
@@ -155,7 +149,7 @@ show_percentage = false
 top_level = true
 position = Vector2(248, 280)
 scale = Vector2(0.0292969, 0.144531)
-texture = ExtResource("5_kvsgw")
+texture = ExtResource("5_kscu3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SkillCheck"]
 visible = false
@@ -166,11 +160,11 @@ shape = SubResource("RectangleShape2D_m4eom")
 [node name="Bar" type="Sprite2D" parent="SkillCheck"]
 position = Vector2(164, 284)
 scale = Vector2(0.226563, 0.0749511)
-texture = ExtResource("6_kob4j")
+texture = ExtResource("6_lvhq1")
 
 [node name="matchup" type="Sprite2D" parent="SkillCheck"]
 position = Vector2(100, 280)
 scale = Vector2(0.102564, 0.0706319)
-texture = ExtResource("1_g3pup")
+texture = ExtResource("1_gvecn")
 
 [connection signal="animation_finished" from="SkillCheck/puncheffect" to="SkillCheck" method="_on_puncheffect_animation_finished"]
