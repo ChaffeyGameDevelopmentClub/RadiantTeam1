@@ -1,14 +1,7 @@
-<<<<<<< Updated upstream
-[gd_scene load_steps=8 format=3 uid="uid://c18485jxykfy2"]
+[gd_scene load_steps=8 format=3 uid="uid://5tfappstaw45"]
 
 [ext_resource type="Script" path="res://Bed.gd" id="1_3fqp4"]
 [ext_resource type="Texture2D" path="res://BoxingGame/boxingbagsprite.jpg" id="2_a53k8"]
-=======
-[gd_scene load_steps=8 format=3 uid="uid://g7joq5ggoege"]
-
-[ext_resource type="Script" path="res://Bed.gd" id="1_3fqp4"]
-[ext_resource type="Texture2D" uid="uid://sb8s52cbpafs" path="res://BoxingGame/boxingbagsprite.jpg" id="2_a53k8"]
->>>>>>> Stashed changes
 [ext_resource type="Script" path="res://BedTarget.gd" id="3_by21m"]
 [ext_resource type="Script" path="res://Book.gd" id="4_g3c0s"]
 

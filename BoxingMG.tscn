@@ -1,20 +1,10 @@
-<<<<<<< Updated upstream
-[gd_scene load_steps=19 format=3 uid="uid://bf5hap0rv8vqa"]
+[gd_scene load_steps=19 format=3 uid="uid://vgl6v8jppjbw"]
 
 [ext_resource type="Texture2D" path="res://BoxingGame/boxingbagsprite.jpg" id="1_g3pup"]
 [ext_resource type="Script" path="res://SkillCheck.gd" id="3_5idga"]
 [ext_resource type="Texture2D" path="res://BoxingGame/puncheffect.png" id="4_pjnkb"]
 [ext_resource type="Texture2D" path="res://BoxingGame/red.png" id="5_kvsgw"]
 [ext_resource type="Texture2D" path="res://BoxingGame/blackbar.png" id="6_kob4j"]
-=======
-[gd_scene load_steps=19 format=3 uid="uid://4a6bny723kuu"]
-
-[ext_resource type="Texture2D" uid="uid://sb8s52cbpafs" path="res://BoxingGame/boxingbagsprite.jpg" id="1_g3pup"]
-[ext_resource type="Script" path="res://SkillCheck.gd" id="3_5idga"]
-[ext_resource type="Texture2D" uid="uid://dwktwom5rtvyl" path="res://BoxingGame/puncheffect.png" id="4_pjnkb"]
-[ext_resource type="Texture2D" uid="uid://bhumajjl1f8sj" path="res://BoxingGame/red.png" id="5_kvsgw"]
-[ext_resource type="Texture2D" uid="uid://bwew1s2ccgteq" path="res://BoxingGame/blackbar.png" id="6_kob4j"]
->>>>>>> Stashed changes
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8kmtd"]
 radius = 85.0159
