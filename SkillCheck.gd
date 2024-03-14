@@ -3,6 +3,8 @@ extends Area2D
 @onready var punchingbag:Sprite2D=$matchup
 @onready var bar:ProgressBar=$ProgressBar
 @onready var effect:AnimatedSprite2D=$puncheffect
+@onready var redGuy2:Sprite2D=$"../RedGuy2"
+@onready var line2:TextEdit=$"../CanvasLayer/line2"
 #var mspos:float=movingsprite.position.x
 #var pbpos:float=punchingbag.position.x
 var pos=2
@@ -13,7 +15,8 @@ func _physics_process(_delta):
 	movingsprite.position.x+=pos
 	if bar.value==10:
 		set_physics_process(false)
-		#call function that plays cure scene
+		redGuy2.show()
+		line2.show()
 	if Input.is_action_just_pressed("space") and punchingbag.position.x<(movingsprite.position.x+40):
 		effectplace()
 		bagnewpos()

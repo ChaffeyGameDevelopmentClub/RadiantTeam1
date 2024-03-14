@@ -1,5 +1,4 @@
 res://BoxingMG.tscn
-res://CleaningRoom.tscn
 res://Bed.gd
-res://SkillCheck.gd
-res://Book.gd
+res://CleaningRoom.tscn
+res://BedTarget.gd

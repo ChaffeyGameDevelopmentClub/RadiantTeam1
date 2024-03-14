@@ -1,19 +1,20 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1710189930
-Bed.gd::GDScript::-1::1710113255::0::1::::<>CharacterBody2D<>::
-BedTarget.gd::GDScript::-1::1710112116::0::1::::<>Area2D<>::
-BoxingMG.tscn::PackedScene::2037361199442589684::1710117907::0::1::::<><>::uid://sb8s52cbpafs::::res://BoxingGame/boxingbagsprite.jpg<>res://SkillCheck.gd<>uid://dwktwom5rtvyl::::res://BoxingGame/puncheffect.png<>uid://bhumajjl1f8sj::::res://BoxingGame/red.png<>uid://bwew1s2ccgteq::::res://BoxingGame/blackbar.png
-CleaningRoom.tscn::PackedScene::487765491006594288::1710117907::0::1::::<><>::res://Bed.gd<>uid://sb8s52cbpafs::::res://BoxingGame/boxingbagsprite.jpg<>res://BedTarget.gd
-progress_bar.tscn::PackedScene::6375557899107986960::1710036721::0::1::::<><>::res://ProgressBar.gd
+::res://::1710371989
+Bed.gd::GDScript::-1::1710309748::0::1::::<>CharacterBody2D<>::
+BedTarget.gd::GDScript::-1::1710194057::0::1::::<>Area2D<>::
+BoxingMG.tscn::PackedScene::175157783324669650::1710309748::0::1::::<><>::uid://sb8s52cbpafs::::res://BoxingGame/boxingbagsprite.jpg<>res://SkillCheck.gd<>uid://dwktwom5rtvyl::::res://BoxingGame/puncheffect.png<>uid://bhumajjl1f8sj::::res://BoxingGame/red.png<>uid://bwew1s2ccgteq::::res://BoxingGame/blackbar.png
+CleaningRoom.tscn::PackedScene::7234485855292436487::1710309748::0::1::::<><>::res://Bed.gd<>uid://sb8s52cbpafs::::res://BoxingGame/boxingbagsprite.jpg<>res://BedTarget.gd<>uid://bhumajjl1f8sj::::res://BoxingGame/red.png
+progress_bar.tscn::PackedScene::6375557899107986960::1710194057::0::1::::<><>::res://ProgressBar.gd
 README.md::TextFile::-1::1709968829::0::1::::<><>::
-rec.gd::GDScript::-1::1710033022::0::1::::<>Sprite2D<>::
-SkillCheck.gd::GDScript::-1::1710113255::0::1::::<>Area2D<>::
-::res://Assets/::1710055526
+rec.gd::GDScript::-1::1710194057::0::1::::<>Sprite2D<>::
+SkillCheck.gd::GDScript::-1::1710304108::0::1::::<>Area2D<>::
+::res://Assets/::1710194343
 ::res://Assets/Blue/::1710055526
 Blue.txt::TextFile::-1::1710055526::0::1::::<><>::
 ::res://Assets/Green/::1710055526
 Green.txt::TextFile::-1::1710055526::0::1::::<><>::
-::res://Assets/Main menu/::1710055526
+::res://Assets/lizzysPallete/::1710194343
+::res://Assets/Main menu/::1710194343
 MainMenu.txt::TextFile::-1::1710055526::0::1::::<><>::
 ::res://Assets/Orange/::1710055526
 Orange.txt::TextFile::-1::1710055526::0::1::::<><>::
@@ -23,8 +24,8 @@ Purple.txt::TextFile::-1::1710055526::0::1::::<><>::
 Red.txt::TextFile::-1::1710055526::0::1::::<><>::
 ::res://Assets/Yellow/::1710055526
 Yellow.txt::TextFile::-1::1710055526::0::1::::<><>::
-::res://BoxingGame/::1710110067
-blackbar.png::CompressedTexture2D::3940215946452265396::1710034012::1710109793::1::::<><>::
-boxingbagsprite.jpg::CompressedTexture2D::1267500985793244612::1710022111::1710109795::1::::<><>::
-puncheffect.png::CompressedTexture2D::8725254054236191223::1710045984::1710110067::1::::<><>::
-red.png::CompressedTexture2D::2919759235301881561::1710032884::1710110062::1::::<><>::
+::res://BoxingGame/::1710194281
+blackbar.png::CompressedTexture2D::3940215946452265396::1710194057::1710194281::1::::<><>::
+boxingbagsprite.jpg::CompressedTexture2D::1267500985793244612::1710194057::1710194281::1::::<><>::
+puncheffect.png::CompressedTexture2D::8725254054236191223::1710194057::1710194280::1::::<><>::
+red.png::CompressedTexture2D::2919759235301881561::1710194057::1710194281::1::::<><>::
