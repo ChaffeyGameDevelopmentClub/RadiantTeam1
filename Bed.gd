@@ -14,7 +14,7 @@ const JUMP_VELOCITY = -400.0
 @onready var bedCol:CollisionShape2D=$"../BedArea/CollisionShape2D"
 @onready var girlIcon:Sprite2D=$"../BlueGirl"
 @onready var text2:TextEdit=$"../CanvasLayer/TextEdit2"
-@onready var teddyBear:Sprite2D=$"../teddyBear"
+@onready var cat:Sprite2D=$"../cat"
 @onready var book:Sprite2D=$"../book"
 @onready var therapist:Sprite2D=$"../Therapist"
 
@@ -38,7 +38,7 @@ func _on_bed_area_body_entered(body):
 	shelfTarget.show()
 	control.position.x=150
 	control.position.y=180
-	spriteChange.texture=load("res://BoxingGame/red.png")
+	spriteChange.texture=load("res://Assets/Blue/desk.png")
 	text.text="Can you move \n my desk now"
 	
 	shelfCol.call_deferred("set","disabled",false)
@@ -54,15 +54,15 @@ func _on_shelf_area_body_entered(body):
 
 func _input(event):
 	if event.is_pressed() and Input.is_action_just_pressed("leftClick"):
-		if event.position.x>0 and event.position.x<75 and event.position.y>0 and event.position.y<125:
-			teddyBear.show()
-			teddyBear.position.x=event.position.x
-			teddyBear.position.y=event.position.y
+		if event.position.x>1 and event.position.x<180 and event.position.y>10 and event.position.y<300:
+			cat.position.x=event.position.x/2.5
+			cat.position.y=event.position.y/2.6
+			cat.show()
 			text.text="Lastly can you \nput my book \non my desk"
-		elif event.position.x>110 and event.position.x<200 and event.position.y>0 and event.position.y<50:
+		elif event.position.x>300 and event.position.x<530 and event.position.y>15 and event.position.y<90:
 			book.show()
-			book.position.x=event.position.x
-			book.position.y=event.position.y
+			book.position.x=event.position.x/2.5
+			book.position.y=event.position.y/2.5
 			finishGame()
 
 func finishGame():

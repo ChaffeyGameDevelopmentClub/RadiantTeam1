@@ -1,34 +1,31 @@
-[gd_scene load_steps=8 format=3 uid="uid://dbco6pm0y8872"]
+[gd_scene load_steps=12 format=3 uid="uid://dbco6pm0y8872"]
 
 [ext_resource type="Script" path="res://Bed.gd" id="1_3fqp4"]
-[ext_resource type="Texture2D" uid="uid://sb8s52cbpafs" path="res://BoxingGame/boxingbagsprite.jpg" id="2_a53k8"]
-[ext_resource type="Script" path="res://BedTarget.gd" id="3_by21m"]
+[ext_resource type="Texture2D" uid="uid://d1w34f1b17sbg" path="res://Assets/Blue/DialogueBgBlue.png" id="1_g5cl3"]
+[ext_resource type="Texture2D" uid="uid://dv1s808gfnp66" path="res://Assets/Blue/bed.png" id="3_qegr3"]
+[ext_resource type="Texture2D" uid="uid://0bmrhf2n4s2i" path="res://Assets/Blue/desk.png" id="4_3d6kl"]
 [ext_resource type="Texture2D" uid="uid://bhumajjl1f8sj" path="res://BoxingGame/red.png" id="4_vixrg"]
+[ext_resource type="Texture2D" uid="uid://dwt1f1utkb30u" path="res://Assets/Blue/catGirl.png" id="5_63xgf"]
+[ext_resource type="Texture2D" uid="uid://di4rmkmkp6ew3" path="res://Assets/Blue/catpixel.png" id="6_qb8bs"]
+[ext_resource type="Texture2D" uid="uid://bwb37hhpfilng" path="res://Assets/Blue/hxhbook.png" id="7_kymk3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6oqvv"]
 size = Vector2(19, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ra3wb"]
-size = Vector2(73, 114)
+size = Vector2(73, 108)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xah1k"]
 size = Vector2(87, 32)
 
 [node name="Node2D" type="Node2D"]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 467.0
-offset_bottom = 245.0
-color = Color(0.517647, 0.560784, 0.6, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="."]
-offset_left = 233.0
-offset_top = 1.0
-offset_right = 466.0
-offset_bottom = 244.0
+[node name="BackGround" type="Sprite2D" parent="."]
+position = Vector2(232.5, 123.5)
+scale = Vector2(1.53667, 1.265)
+texture = ExtResource("1_g5cl3")
 
 [node name="BedArea" type="Area2D" parent="."]
-script = ExtResource("3_by21m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BedArea"]
 position = Vector2(9.5, 7.5)
@@ -45,38 +42,34 @@ script = ExtResource("1_3fqp4")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control"]
-position = Vector2(31.5, 52)
+position = Vector2(31.5, 55)
 shape = SubResource("RectangleShape2D_ra3wb")
 
 [node name="Sprite2D" type="Sprite2D" parent="Control"]
-position = Vector2(31, 52)
-scale = Vector2(0.240385, 0.222119)
-texture = ExtResource("2_a53k8")
+position = Vector2(32.5, 46)
+scale = Vector2(2.01, 1.94)
+texture = ExtResource("3_qegr3")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
 
 [node name="TextEdit" type="TextEdit" parent="CanvasLayer"]
-offset_left = 329.0
-offset_top = 10.0
-offset_right = 467.0
-offset_bottom = 85.0
-theme_override_colors/background_color = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 12
+offset_left = 334.0
+offset_top = 43.0
+offset_right = 438.0
+offset_bottom = 91.0
+theme_override_colors/background_color = Color(0.478431, 0.470588, 0.470588, 1)
+theme_override_font_sizes/font_size = 10
 text = "Can you first move 
 my bed into place"
 
 [node name="TextEdit2" type="TextEdit" parent="CanvasLayer"]
-visible = false
-offset_left = 322.0
-offset_top = 83.0
-offset_right = 465.0
-offset_bottom = 142.0
-theme_override_colors/background_color = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 12
-text = "Slayy queen I did
-that"
+offset_left = 271.0
+offset_top = 166.0
+offset_right = 346.0
+offset_bottom = 211.0
+theme_override_colors/background_color = Color(0.478431, 0.470588, 0.470588, 1)
+text = "Slayy"
 
 [node name="ShelfArea" type="Area2D" parent="."]
 visible = false
@@ -100,39 +93,43 @@ disabled = true
 [node name="ShelfSprite" type="Sprite2D" parent="."]
 visible = false
 top_level = true
-position = Vector2(155.5, 17)
-scale = Vector2(0.197266, 0.148438)
-texture = ExtResource("4_vixrg")
+position = Vector2(158, 42)
+scale = Vector2(1.996, 1.5)
+texture = ExtResource("4_3d6kl")
 
 [node name="BedSprite" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(40, 59)
-scale = Vector2(0.255208, 0.222351)
-texture = ExtResource("2_a53k8")
+position = Vector2(42, 66)
+scale = Vector2(2.1615, 1.9)
+texture = ExtResource("3_qegr3")
 
 [node name="BlueGirl" type="Sprite2D" parent="."]
-position = Vector2(281, 37)
-scale = Vector2(0.158203, 0.206055)
-texture = ExtResource("4_vixrg")
+texture_filter = 1
+position = Vector2(286, 63)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_63xgf")
 
 [node name="Therapist" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(280, 109)
+position = Vector2(409, 187)
 scale = Vector2(0.158203, 0.206055)
 texture = ExtResource("4_vixrg")
 
-[node name="teddyBear" type="Sprite2D" parent="."]
+[node name="cat" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(167, 61)
-scale = Vector2(0.24359, 0.134758)
-texture = ExtResource("2_a53k8")
+position = Vector2(154.875, 61)
+scale = Vector2(1.5625, 1)
+texture = ExtResource("6_qb8bs")
 
 [node name="book" type="Sprite2D" parent="."]
 visible = false
 top_level = true
-position = Vector2(33, 208)
-scale = Vector2(0.176282, 0.104089)
-texture = ExtResource("2_a53k8")
+position = Vector2(35, 212.5)
+scale = Vector2(0.594, 0.5)
+texture = ExtResource("7_kymk3")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(2.5, 2.6)
 
 [connection signal="body_entered" from="BedArea" to="Control" method="_on_bed_area_body_entered"]
 [connection signal="input_event" from="Control" to="BedArea" method="_on_control_input_event"]

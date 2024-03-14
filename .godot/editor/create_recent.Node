@@ -1,14 +1,14 @@
+TextEdit
 Sprite2D
+Camera2D
+Area2D
 TextureButton
 CheckButton
-TextEdit
 CanvasLayer
 CollisionShape2D
 ColorRect
-Area2D
 CharacterBody2D
 RigidBody2D
 StaticBody2D
 AnimatedSprite2D
 ProgressBar
-AnimationPlayer

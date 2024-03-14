@@ -4,6 +4,7 @@ extends Area2D
 @onready var bar:ProgressBar=$ProgressBar
 @onready var effect:AnimatedSprite2D=$puncheffect
 @onready var redGuy2:Sprite2D=$"../RedGuy2"
+@onready var line1:TextEdit=$"../CanvasLayer/line1"
 @onready var line2:TextEdit=$"../CanvasLayer/line2"
 #var mspos:float=movingsprite.position.x
 #var pbpos:float=punchingbag.position.x
@@ -17,6 +18,8 @@ func _physics_process(_delta):
 		set_physics_process(false)
 		redGuy2.show()
 		line2.show()
+	if bar.value==5:
+		line1.text="Almost there!!"
 	if Input.is_action_just_pressed("space") and punchingbag.position.x<(movingsprite.position.x+40):
 		effectplace()
 		bagnewpos()
