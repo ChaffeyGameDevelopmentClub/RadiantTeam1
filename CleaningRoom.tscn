@@ -1,0 +1,85 @@
+[gd_scene load_steps=8 format=3 uid="uid://5tfappstaw45"]
+
+[ext_resource type="Script" path="res://Bed.gd" id="1_3fqp4"]
+[ext_resource type="Texture2D" path="res://BoxingGame/boxingbagsprite.jpg" id="2_a53k8"]
+[ext_resource type="Script" path="res://BedTarget.gd" id="3_by21m"]
+[ext_resource type="Script" path="res://Book.gd" id="4_g3c0s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6oqvv"]
+size = Vector2(16, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ra3wb"]
+size = Vector2(73, 114)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_byqph"]
+size = Vector2(45.5, 26.5)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 466.0
+offset_bottom = 245.0
+color = Color(0.517647, 0.560784, 0.6, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 233.0
+offset_top = 1.0
+offset_right = 466.0
+offset_bottom = 244.0
+
+[node name="BedArea" type="Area2D" parent="."]
+script = ExtResource("3_by21m")
+
+[node name="BedTarget" type="ColorRect" parent="BedArea"]
+offset_right = 82.0
+offset_bottom = 125.0
+color = Color(0.752941, 0.752941, 0.752941, 1)
+
+[node name="BedTarget2" type="ColorRect" parent="BedArea/BedTarget"]
+offset_left = -2.0
+offset_right = 74.0
+offset_bottom = 118.0
+color = Color(0.160784, 0.592157, 0.839216, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BedArea"]
+position = Vector2(8, 6.5)
+shape = SubResource("RectangleShape2D_6oqvv")
+
+[node name="Bed" type="CharacterBody2D" parent="."]
+position = Vector2(160, 126)
+script = ExtResource("1_3fqp4")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed"]
+position = Vector2(31.5, 52)
+shape = SubResource("RectangleShape2D_ra3wb")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bed"]
+position = Vector2(31, 52)
+scale = Vector2(0.240385, 0.222119)
+texture = ExtResource("2_a53k8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer"]
+offset_left = 265.0
+offset_top = 12.0
+offset_right = 432.0
+offset_bottom = 47.0
+theme_override_colors/background_color = Color(0.552941, 0.552941, 0.552941, 1)
+text = "Move Bed into place"
+
+[node name="Book" type="CharacterBody2D" parent="."]
+position = Vector2(180, 40)
+scale = Vector2(0.147436, 0.0446097)
+script = ExtResource("4_g3c0s")
+
+[node name="Sprite2D" type="Sprite2D" parent="Book"]
+texture = ExtResource("2_a53k8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Book"]
+position = Vector2(5.08716, 16.8125)
+scale = Vector2(6.78261, 22.4167)
+shape = SubResource("RectangleShape2D_byqph")
+
+[connection signal="body_entered" from="BedArea" to="Bed" method="_on_bed_area_body_entered"]

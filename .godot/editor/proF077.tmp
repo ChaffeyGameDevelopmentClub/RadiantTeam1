@@ -1,0 +1,49 @@
+[editor_metadata]
+
+executable_path="C:/Users/Lizzy/Downloads/Godot_v4.2.1-stable_win64.exe/Godot_v4.2.1-stable_win64.exe"
+use_advanced_connections=false
+
+[debug_options]
+
+run_live_debug=true
+run_reload_scripts=true
+
+[linked_properties]
+
+Node2D:scale=true
+ColorRect:scale=true
+Sprite2D:scale=true
+StaticBody2D:scale=true
+CollisionShape2D:scale=true
+HSlider:scale=true
+VSlider:scale=true
+ProgressBar:scale=true
+CanvasLayer:scale=true
+TextureButton:scale=true
+TextureRect:scale=true
+AnimatedSprite2D:scale=true
+Area2D:scale=true
+CharacterBody2D:scale=true
+
+[dialog_bounds]
+
+create_new_node=Rect2(493, 134, 900, 883)
+project_settings=Rect2(638, 169, 900, 700)
+
+[color_picker]
+
+recent_presets=PackedColorArray(0.0728426, 0.0728426, 0.0728426, 1, 0.00184107, 0.00184107, 0.00184107, 1, 0.741176, 0, 0, 1, 0.396078, 1, 1, 1, 0.00784314, 1, 1, 1, 1, 1, 1, 1, 0.0177324, 0.0177324, 0.0177324, 1, 0.00820202, 0.00820202, 0.00820202, 1, 0, 0, 0, 1)
+presets=PackedColorArray()
+
+[script_setup]
+
+last_selected_language="GDScript"
+
+[recent_files]
+
+scripts=["res://Furniture1.gd", "res://matchup.gd", "res://SkillCheck.gd", "res://Moving.gd", "res://rec.gd", "res://Move.gd", "res://TimedClickBar.gd", "res://ProgressBar.gd", "res://RandomSprite.gd", "res://ProgressBarBox.gd"]
+scenes=["res://CleanRoom.tscn", "res://progress_bar.tscn", "res://RandomSprite.tscn"]
+
+[project_settings]
+
+show_builtin_actions=false
