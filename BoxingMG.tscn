@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cq328re2r44m"]
+[gd_scene load_steps=17 format=3 uid="uid://cq328re2r44m"]
 
 [ext_resource type="Texture2D" uid="uid://dcwskyqfcowq8" path="res://Assets/Red/DialogueBgRed.png" id="1_2krpe"]
 [ext_resource type="Texture2D" uid="uid://sb8s52cbpafs" path="res://BoxingGame/boxingbagsprite.jpg" id="1_g3pup"]
@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://duouw08gsyibk" path="res://Assets/Red/punchfin.png" id="4_r83eq"]
 [ext_resource type="Texture2D" uid="uid://bhumajjl1f8sj" path="res://BoxingGame/red.png" id="5_kvsgw"]
 [ext_resource type="Texture2D" uid="uid://bwew1s2ccgteq" path="res://BoxingGame/blackbar.png" id="6_kob4j"]
+[ext_resource type="Texture2D" uid="uid://bjtf0avwjmyla" path="res://Assets/Red/red1.png" id="8_hq5fv"]
+[ext_resource type="Texture2D" uid="uid://cwbmpti0qgku1" path="res://Assets/Blue/nextButton-export.png" id="9_fwh0e"]
+[ext_resource type="Texture2D" uid="uid://bwb37hhpfilng" path="res://Assets/Blue/hxhbook.png" id="10_eeq7p"]
+[ext_resource type="AudioStream" uid="uid://m4hpp6glfjh8" path="res://Assets/Red_Patient.wav" id="11_rq4q5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8kmtd"]
 radius = 85.0159
@@ -44,6 +48,10 @@ show_behind_parent = true
 position = Vector2(300.5, 159.5)
 scale = Vector2(2.00333, 1.575)
 texture = ExtResource("1_2krpe")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Background"]
+stream = ExtResource("11_rq4q5")
+autoplay = true
 
 [node name="PunchingBag" type="Sprite2D" parent="."]
 position = Vector2(166, 114)
@@ -103,11 +111,11 @@ scale = Vector2(0.102564, 0.0706319)
 texture = ExtResource("1_g3pup")
 
 [node name="RedGuy" type="Sprite2D" parent="."]
-position = Vector2(370, 95)
-scale = Vector2(0.101563, 0.257813)
-texture = ExtResource("6_kob4j")
+position = Vector2(375, 78)
+scale = Vector2(0.635135, 0.606061)
+texture = ExtResource("8_hq5fv")
 
-[node name="RedGuy2" type="Sprite2D" parent="."]
+[node name="Therapist" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(530, 243)
 scale = Vector2(0.101563, 0.257813)
@@ -116,26 +124,78 @@ texture = ExtResource("6_kob4j")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
 
-[node name="line1" type="TextEdit" parent="CanvasLayer"]
-offset_left = 428.0
+[node name="line1" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 430.0
 offset_top = 57.0
-offset_right = 571.0
-offset_bottom = 120.0
-theme_override_colors/background_color = Color(0.478431, 0.470588, 0.470588, 1)
-text = "Punch this 4 me
+offset_right = 678.0
+offset_bottom = 177.0
+scale = Vector2(0.6, 0.6)
+text = "Hey man, I've got like, a major
+issue, apparently 
+boss man 
+says I need to chill out
 "
 
-[node name="line2" type="TextEdit" parent="CanvasLayer"]
-visible = false
-offset_left = 323.0
-offset_top = 207.0
-offset_right = 482.0
-offset_bottom = 274.0
-text = "ur welcome
-"
+[node name="line2" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 332.0
+offset_top = 209.0
+offset_right = 559.0
+offset_bottom = 316.0
+scale = Vector2(0.6, 0.6)
+text = "Chill out?"
+
+[node name="textButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 552.0
+offset_top = 287.0
+offset_right = 1064.0
+offset_bottom = 799.0
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("9_fwh0e")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 zoom = Vector2(1.9, 2)
 
+[node name="boxingGloves" type="Sprite2D" parent="."]
+
+[node name="FINAL" type="ColorRect" parent="."]
+visible = false
+offset_left = 174.0
+offset_top = 43.0
+offset_right = 399.0
+offset_bottom = 196.0
+color = Color(0.572549, 0.0901961, 0.0901961, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="FINAL"]
+position = Vector2(161, 52)
+texture = ExtResource("10_eeq7p")
+
+[node name="TextEdit" type="RichTextLabel" parent="FINAL"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 32.0
+offset_right = 153.0
+offset_bottom = 82.0
+scale = Vector2(0.6, 0.6)
+text = "Gift Recieved"
+
+[node name="TextEdit2" type="TextEdit" parent="FINAL"]
+top_level = true
+layout_mode = 0
+offset_left = 228.0
+offset_top = 150.0
+offset_right = 435.0
+offset_bottom = 190.0
+scale = Vector2(0.6, 0.6)
+text = "   Back to Phone book"
+
+[node name="PhoneBook" type="TextureButton" parent="FINAL"]
+visible = false
+layout_mode = 0
+offset_left = 48.0
+offset_top = 92.0
+offset_right = 160.0
+offset_bottom = 119.0
+
 [connection signal="animation_finished" from="SkillCheck/puncheffect" to="SkillCheck" method="_on_puncheffect_animation_finished"]
+[connection signal="pressed" from="CanvasLayer/textButton" to="SkillCheck" method="_on_text_button_pressed"]

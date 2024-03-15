@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://n55t262jvy1o"
+path="res://.godot/imported/Assets_Audio_Blue Patient Minigame_Blue_Patient_Final.wav-cabf13832fae89d6754d4bc47eeb4157.sample"
+
+[deps]
+
+source_file="res://Assets/Assets_Audio_Blue Patient Minigame_Blue_Patient_Final.wav"
+dest_files=["res://.godot/imported/Assets_Audio_Blue Patient Minigame_Blue_Patient_Final.wav-cabf13832fae89d6754d4bc47eeb4157.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,14 +1,18 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1710445701
-Bed.gd::GDScript::-1::1710397027::0::1::::<>CharacterBody2D<>::
-BoxingMG.tscn::PackedScene::175157783324669650::1710445701::0::1::::<><>::uid://dcwskyqfcowq8::::res://Assets/Red/DialogueBgRed.png<>uid://sb8s52cbpafs::::res://BoxingGame/boxingbagsprite.jpg<>uid://dg4jyhdrjmcrf::::res://Assets/Red/punching.png<>res://SkillCheck.gd<>uid://duouw08gsyibk::::res://Assets/Red/punchfin.png<>uid://bhumajjl1f8sj::::res://BoxingGame/red.png<>uid://bwew1s2ccgteq::::res://BoxingGame/blackbar.png
-CleaningRoom.tscn::PackedScene::7234485855292436487::1710445701::0::1::::<><>::res://Bed.gd<>uid://d1w34f1b17sbg::::res://Assets/Blue/DialogueBgBlue.png<>uid://dv1s808gfnp66::::res://Assets/Blue/bed.png<>uid://0bmrhf2n4s2i::::res://Assets/Blue/desk.png<>uid://bhumajjl1f8sj::::res://BoxingGame/red.png<>uid://di4rmkmkp6ew3::::res://Assets/Blue/catpixel.png<>uid://bwb37hhpfilng::::res://Assets/Blue/hxhbook.png
+::res://::1710462536
+Bed.gd::GDScript::-1::1710458035::0::1::::<>CharacterBody2D<>::
+BoxingMG.tscn::PackedScene::175157783324669650::1710462502::0::1::::<><>::uid://dcwskyqfcowq8::::res://Assets/Red/DialogueBgRed.png<>uid://sb8s52cbpafs::::res://BoxingGame/boxingbagsprite.jpg<>uid://dg4jyhdrjmcrf::::res://Assets/Red/punching.png<>res://SkillCheck.gd<>uid://duouw08gsyibk::::res://Assets/Red/punchfin.png<>uid://bhumajjl1f8sj::::res://BoxingGame/red.png<>uid://bwew1s2ccgteq::::res://BoxingGame/blackbar.png<>uid://bjtf0avwjmyla::::res://Assets/Red/red1.png<>uid://cwbmpti0qgku1::::res://Assets/Blue/nextButton-export.png<>uid://bwb37hhpfilng::::res://Assets/Blue/hxhbook.png
+CleaningRoom.tscn::PackedScene::7234485855292436487::1710462502::0::1::::<><>::res://Bed.gd<>uid://d1w34f1b17sbg::::res://Assets/Blue/DialogueBgBlue.png<>uid://dv1s808gfnp66::::res://Assets/Blue/bed.png<>uid://0bmrhf2n4s2i::::res://Assets/Blue/desk.png<>uid://cwbmpti0qgku1::::res://Assets/Blue/nextButton-export.png<>uid://bhumajjl1f8sj::::res://BoxingGame/red.png<>uid://dwt1f1utkb30u::::res://Assets/Blue/catGirl.png<>uid://di4rmkmkp6ew3::::res://Assets/Blue/catpixel.png<>uid://bwb37hhpfilng::::res://Assets/Blue/hxhbook.png
 progress_bar.tscn::PackedScene::-1::1710387068::0::1::::<><>::
 README.md::TextFile::-1::1709968829::0::1::::<><>::
 rec.gd::GDScript::-1::1710387068::0::1::::<>Sprite2D<>::
-SkillCheck.gd::GDScript::-1::1710397405::0::1::::<>Area2D<>::
-::res://Assets/::1710387116
-::res://Assets/Blue/::1710445444
+EndCredits.tscn::PackedScene::8443051953165409137::1710462536::0::1::::<><>::res://EndCredits.gd<>uid://bpgfbhpjtkoog::::res://Assets/Main menu/CreditScene-Sheet.png
+EndCredits.gd::GDScript::-1::1710462536::0::1::::<>Node2D<>::
+SkillCheck.gd::GDScript::-1::1710458424::0::1::::<>Area2D<>::
+::res://Assets/::1710462709
+Assets_Audio_Blue Patient Minigame_Blue_Patient_Final.wav::AudioStreamWAV::976243207042429498::1710462700::1710462713::1::::<><>::
+Red_Patient.wav::AudioStreamWAV::902585720408769291::1710462649::1710462713::1::::<><>::
+::res://Assets/Blue/::1710457023
 bed.png::CompressedTexture2D::8688054790494318257::1710394318::1710394703::1::::<><>::
 Blue.txt::TextFile::-1::1710055526::0::1::::<><>::
 catGirl.png::CompressedTexture2D::8744228756604504926::1710445956::1710445958::1::::<><>::
@@ -17,22 +21,33 @@ desk.png::CompressedTexture2D::1757544807747213630::1710394312::1710394424::1:::
 DialogueBgBlue.png::CompressedTexture2D::9031340462941287472::1710397514::1710397530::1::::<><>::
 happycatgirl.png::CompressedTexture2D::2796229994845143204::1710445140::1710445444::1::::<><>::
 hxhbook.png::CompressedTexture2D::3934397221851913500::1710394311::1710394424::1::::<><>::
-::res://Assets/Green/::1710055526
-Green.txt::TextFile::-1::1710055526::0::1::::<><>::
+nextButton-export.png::CompressedTexture2D::6319816707458348474::1710457020::1710457023::1::::<><>::
+nextButton.png::CompressedTexture2D::2872320362050289188::1710456914::1710456949::1::::<><>::
 ::res://Assets/lizzysPallete/::1710387018
-::res://Assets/Main menu/::1710387068
+::res://Assets/Main menu/::1710446285
+CreditScene-Sheet.png::CompressedTexture2D::3451945366815918842::1710446279::1710446285::1::::<><>::
+DialogueBg.png::CompressedTexture2D::8681585102336570786::1710446279::1710446285::1::::<><>::
 MainMenu.txt::TextFile::-1::1710055526::0::1::::<><>::
-::res://Assets/Orange/::1710055526
+PhoneBook.png::CompressedTexture2D::7812919368275325922::1710446279::1710446285::1::::<><>::
+TherapistBg.png::CompressedTexture2D::7515517300406789737::1710446279::1710446285::1::::<><>::
+TherapistMainMenu.png::CompressedTexture2D::9131776877128621490::1710446279::1710446285::1::::<><>::
+::res://Assets/Orange/::1710446285
+DialogueBgOrange.png::CompressedTexture2D::3859783820781363402::1710446280::1710446285::1::::<><>::
+egg1.png::CompressedTexture2D::5508329620833013062::1710446280::1710446285::1::::<><>::
+egg2.png::CompressedTexture2D::8654679398628819301::1710446280::1710446285::1::::<><>::
 Orange.txt::TextFile::-1::1710055526::0::1::::<><>::
-::res://Assets/Purple/::1710055526
-Purple.txt::TextFile::-1::1710055526::0::1::::<><>::
-::res://Assets/Red/::1710445595
+::res://Assets/Red/::1710446285
 DialogueBgRed.png::CompressedTexture2D::7346168098261228489::1710396646::1710396719::1::::<><>::
 punchanimation-Sheet.png::CompressedTexture2D::1848093650500287919::1710394316::1710394424::1::::<><>::
 punchfin.png::CompressedTexture2D::8593195204077943212::1710445143::1710445595::1::::<><>::
 punching.png::CompressedTexture2D::7640851752846614687::1710394308::1710394424::1::::<><>::
+red1.png::CompressedTexture2D::3057691717026981830::1710446280::1710446285::1::::<><>::
+red2.png::CompressedTexture2D::6035721615721299240::1710446280::1710446285::1::::<><>::
 Red.txt::TextFile::-1::1710055526::0::1::::<><>::
-::res://Assets/Yellow/::1710055526
+::res://Assets/Yellow/::1710446285
+DialogueBgYellow.png::CompressedTexture2D::7934627350269169544::1710446280::1710446285::1::::<><>::
+yellow1.png::CompressedTexture2D::5344765492439857297::1710446280::1710446285::1::::<><>::
+yellow2.png::CompressedTexture2D::5400762933390280978::1710446280::1710446285::1::::<><>::
 Yellow.txt::TextFile::-1::1710055526::0::1::::<><>::
 ::res://BoxingGame/::1710387068
 blackbar.png::CompressedTexture2D::3940215946452265396::1710387068::1710387068::1::::<><>::
