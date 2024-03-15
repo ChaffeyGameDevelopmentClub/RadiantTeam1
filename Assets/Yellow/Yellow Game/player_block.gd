@@ -14,16 +14,21 @@ var BlockImage
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 var yellowManager
-
+var canPlaceBlock
+var blockPlaceTimer
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 func _ready():
 	nextBlockImage = get_tree().current_scene.get_node("NextBlock")
 	yellowManager = get_tree().current_scene.get_node("yellowManager")
 	BlockImage = get_node("playerBlockSprite")
+	blockPlaceTimer = get_node("BlockPlaceTimer")
+	canPlaceBlock = true
 func _process(delta):
 	if(Input.is_action_just_pressed("Rotate")):
 		rotation_degrees += 90
-	if(Input.is_action_just_pressed("ui_accept") and yellowManager.gameActive == true):
+	if(Input.is_action_just_pressed("ui_accept") and yellowManager.gameActive == true and canPlaceBlock == true):
+		canPlaceBlock = false
+		blockPlaceTimer.start()
 		if nextBlock == 1:
 			T = T1.instantiate()
 		elif nextBlock == 2:
@@ -102,3 +107,7 @@ func _physics_process(delta):
 		if position.x > 100:
 			position.x -= 25
 	move_and_slide()
+
+
+func _on_block_place_timer_timeout():
+	canPlaceBlock = true

@@ -14,3 +14,5 @@ res://Assets/Orange/Orange Game/orange_basket.tscn
 res://Assets/Orange/Orange Game/orange.tscn
 res://Assets/Orange/Orange Game/OrangeGraphic.gd
 res://Assets/Yellow/Yellow Game/player_block.gd
+res://Assets/Yellow/Yellow Game/YellowGraphic.gd
+res://Assets/Orange/Orange Game/OrangeManager.gd

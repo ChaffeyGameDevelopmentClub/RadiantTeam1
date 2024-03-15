@@ -53,7 +53,7 @@ func _process(delta):
 				dialogueTimer.start()
 			patientDialogueActive = false
 			playerDialogueActive = false
-	if score == 3 and dialoguePhase == 1:
+	if score == 5 and dialoguePhase == 1:
 		dialoguePhase = 2
 		patientDialogue.set_text("I love stealing oranges.")
 		playerDialogue.set_text("You are evil.")
@@ -61,7 +61,7 @@ func _process(delta):
 		playerDialogue.set_visible_ratio(0)
 		patientDialogueActive = true
 		playerDialogueActive = false
-	if score == 6 and dialoguePhase == 2:
+	if score == 10 and dialoguePhase == 2:
 		dialoguePhase = 3
 		patientDialogue.set_text("Wow, I can now see the error of my ways. Thank you doctor.")
 		playerDialogue.set_text("Yes. Now get out of my house.")
