@@ -3,6 +3,10 @@ res://CleaningRoom.tscn
 res://EndCredits.tscn
 res://Assets/Yellow/Yellow Game/yellow_game.tscn
 res://Assets/Orange/Orange Game/orange_game.tscn
+<<<<<<< HEAD
 res://menu.tscn
 res://pause_button.tscn
 res://level_selection.tscn
+=======
+res://Assets/Yellow/Yellow Game/player_block.tscn
+>>>>>>> Quin/Programming

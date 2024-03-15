@@ -25,3 +25,9 @@ T7 = ExtResource("8_jjbak")
 [node name="playerBlockSprite" type="Sprite2D" parent="."]
 position = Vector2(0, 1)
 texture = ExtResource("9_li1s5")
+
+[node name="BlockPlaceTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="BlockPlaceTimer" to="." method="_on_block_place_timer_timeout"]

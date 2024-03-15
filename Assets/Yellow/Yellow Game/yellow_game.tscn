@@ -4,7 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://bklitilgldg00" path="res://Assets/Yellow/Yellow Game/T Blocks/T Block Nodes/Yellow_Patient_Theme.wav" id="1_rusdx"]
 [ext_resource type="Script" path="res://Assets/Yellow/AudioStreamPlayer2D.gd" id="2_ly55d"]
 [ext_resource type="Script" path="res://Assets/Yellow/Yellow Game/DemolitionBox.gd" id="3_n4riw"]
-[ext_resource type="Texture2D" uid="uid://dcbubg4c31rma" path="res://Assets/Orange/Orange Game/Orange Graphic.png" id="4_5g428"]
+[ext_resource type="Texture2D" uid="uid://bf5jlpj1jc56p" path="res://Assets/Yellow/Yellow Game/Yellow Game Start.png" id="4_5m21y"]
 [ext_resource type="Script" path="res://Assets/Yellow/Yellow Game/yellowManager.gd" id="4_57ttc"]
 [ext_resource type="PackedScene" uid="uid://3ixgu3opddmx" path="res://Assets/Yellow/Yellow Game/player_block.tscn" id="4_p211n"]
 [ext_resource type="Script" path="res://Assets/Yellow/Yellow Game/YellowGraphic.gd" id="5_2gly5"]
@@ -32,7 +32,7 @@ script = ExtResource("2_ly55d")
 
 [node name="YellowGraphic" type="Sprite2D" parent="." node_paths=PackedStringArray("YellowTimer")]
 position = Vector2(289, 381)
-texture = ExtResource("4_5g428")
+texture = ExtResource("4_5m21y")
 script = ExtResource("5_2gly5")
 YellowTimer = NodePath("../yellowManager/YellowTimer")
 
