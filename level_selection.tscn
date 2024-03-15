@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dmh0qnl5ic666"]
+[gd_scene load_steps=26 format=3 uid="uid://dev020ce1brx1"]
 
 [ext_resource type="Script" path="res://Level_Selection.gd" id="1_cnbqw"]
 [ext_resource type="Texture2D" uid="uid://bt8hi0carpgt6" path="res://PhoneBook.png" id="2_tllpj"]
@@ -9,7 +9,7 @@
 [ext_resource type="Script" path="res://Yellow.gd" id="4_sw15o"]
 [ext_resource type="Texture2D" uid="uid://dc38yngwa77as" path="res://egg1.png" id="6_elrlh"]
 [ext_resource type="Texture2D" uid="uid://by1fq46dc2gks" path="res://yellow1.png" id="8_wmms4"]
-[ext_resource type="PackedScene" uid="uid://dk28qje72fe31" path="res://pause_button.tscn" id="10_8trsf"]
+[ext_resource type="PackedScene" uid="uid://b8v60ra1tqkij" path="res://pause_button.tscn" id="10_8trsf"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6f4sf"]
 
@@ -46,6 +46,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -83.0
+offset_top = -40.0
+offset_right = -83.0
+offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_cnbqw")
@@ -70,9 +74,9 @@ icon = ExtResource("3_ncalr")
 [node name="Blue" type="Button" parent="."]
 layout_mode = 0
 offset_left = 195.187
-offset_top = 298.125
+offset_top = 310.125
 offset_right = 353.187
-offset_bottom = 498.125
+offset_bottom = 510.125
 theme_override_styles/normal = SubResource("StyleBoxEmpty_gr8hh")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_7ylyv")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_hrf2n")

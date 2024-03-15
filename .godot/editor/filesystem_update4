@@ -3,3 +3,6 @@ res://CleaningRoom.tscn
 res://EndCredits.tscn
 res://Assets/Yellow/Yellow Game/yellow_game.tscn
 res://Assets/Orange/Orange Game/orange_game.tscn
+res://menu.tscn
+res://pause_button.tscn
+res://level_selection.tscn

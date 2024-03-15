@@ -1,10 +1,11 @@
-[gd_scene load_steps=24 format=3 uid="uid://dk28qje72fe31"]
+[gd_scene load_steps=25 format=3 uid="uid://b8v60ra1tqkij"]
 
 [ext_resource type="Script" path="res://pause_button.gd" id="1_e7h0p"]
 [ext_resource type="Texture2D" uid="uid://pliqyr4uvm0f" path="res://Pause Option Logos Continue A .png" id="2_7e05w"]
 [ext_resource type="Texture2D" uid="uid://bakji7irnf3vf" path="res://Back To Title C.png" id="4_10sj6"]
 [ext_resource type="Texture2D" uid="uid://cg0ynphvhsl2" path="res://Back To Room.png" id="4_aejlo"]
 [ext_resource type="Texture2D" uid="uid://drbmbgi3yld5j" path="res://Pause Option Logos Quit.png" id="5_tfcud"]
+[ext_resource type="Texture2D" uid="uid://cbvhp3da8yx00" path="res://Assets/Main menu/TherapistBg.png" id="6_um46q"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_db68j"]
 
@@ -113,6 +114,11 @@ offset_left = 283.0
 offset_top = 76.0
 offset_right = 274.504
 offset_bottom = 1088.0
+
+[node name="TherapistBg" type="Sprite2D" parent="."]
+position = Vector2(579, 323)
+scale = Vector2(3.84333, 3.2475)
+texture = ExtResource("6_um46q")
 
 [connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="Level Selection" to="." method="_on_level_selection_pressed"]
