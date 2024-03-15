@@ -1,91 +1,37 @@
-[gd_scene load_steps=19 format=3 uid="uid://vgl6v8jppjbw"]
+[gd_scene load_steps=13 format=3 uid="uid://cq328re2r44m"]
 
-[ext_resource type="Texture2D" path="res://BoxingGame/boxingbagsprite.jpg" id="1_g3pup"]
+[ext_resource type="Texture2D" uid="uid://dcwskyqfcowq8" path="res://Assets/Red/DialogueBgRed.png" id="1_2krpe"]
+[ext_resource type="Texture2D" uid="uid://sb8s52cbpafs" path="res://BoxingGame/boxingbagsprite.jpg" id="1_g3pup"]
+[ext_resource type="Texture2D" uid="uid://dg4jyhdrjmcrf" path="res://Assets/Red/punching.png" id="1_urmsr"]
 [ext_resource type="Script" path="res://SkillCheck.gd" id="3_5idga"]
-[ext_resource type="Texture2D" path="res://BoxingGame/puncheffect.png" id="4_pjnkb"]
-[ext_resource type="Texture2D" path="res://BoxingGame/red.png" id="5_kvsgw"]
-[ext_resource type="Texture2D" path="res://BoxingGame/blackbar.png" id="6_kob4j"]
+[ext_resource type="Texture2D" uid="uid://duouw08gsyibk" path="res://Assets/Red/punchfin.png" id="4_r83eq"]
+[ext_resource type="Texture2D" uid="uid://bhumajjl1f8sj" path="res://BoxingGame/red.png" id="5_kvsgw"]
+[ext_resource type="Texture2D" uid="uid://bwew1s2ccgteq" path="res://BoxingGame/blackbar.png" id="6_kob4j"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8kmtd"]
 radius = 85.0159
 height = 380.204
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5dan2"]
-atlas = ExtResource("4_pjnkb")
-region = Rect2(0, 0, 71, 71)
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1ln0"]
+atlas = ExtResource("4_r83eq")
+region = Rect2(0, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_umybr"]
-atlas = ExtResource("4_pjnkb")
-region = Rect2(71, 0, 71, 71)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ckp6l"]
-atlas = ExtResource("4_pjnkb")
-region = Rect2(142, 0, 71, 71)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1bkw1"]
-atlas = ExtResource("4_pjnkb")
-region = Rect2(213, 0, 71, 71)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o5oj1"]
-atlas = ExtResource("4_pjnkb")
-region = Rect2(284, 0, 71, 71)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mux2m"]
-atlas = ExtResource("4_pjnkb")
-region = Rect2(0, 71, 71, 71)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1laih"]
-atlas = ExtResource("4_pjnkb")
-region = Rect2(71, 71, 71, 71)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nypyl"]
-atlas = ExtResource("4_pjnkb")
-region = Rect2(142, 71, 71, 71)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f8kg2"]
-atlas = ExtResource("4_pjnkb")
-region = Rect2(213, 71, 71, 71)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2wurl"]
-atlas = ExtResource("4_pjnkb")
-region = Rect2(284, 71, 71, 71)
+[sub_resource type="AtlasTexture" id="AtlasTexture_4eapg"]
+atlas = ExtResource("4_r83eq")
+region = Rect2(100, 0, 100, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_p8txx"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5dan2")
+"texture": SubResource("AtlasTexture_q1ln0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_umybr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ckp6l")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1bkw1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o5oj1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mux2m")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1laih")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nypyl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_f8kg2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2wurl")
+"texture": SubResource("AtlasTexture_4eapg")
 }],
 "loop": false,
 "name": &"effect",
-"speed": 18.0
+"speed": 8.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m4eom"]
@@ -93,28 +39,21 @@ size = Vector2(186.595, 297.603)
 
 [node name="Node2D" type="Node2D"]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = 2.0
-offset_top = 3.0
-offset_right = 606.0
-offset_bottom = 304.0
+[node name="Background" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(300.5, 159.5)
+scale = Vector2(2.00333, 1.575)
+texture = ExtResource("1_2krpe")
 
-[node name="ColorRect" type="ColorRect" parent="ColorRect"]
-layout_mode = 0
-offset_left = 302.0
-offset_right = 604.0
-offset_bottom = 302.0
-color = Color(0.639216, 0.14902, 0.203922, 1)
+[node name="PunchingBag" type="Sprite2D" parent="."]
+position = Vector2(166, 114)
+scale = Vector2(0.93, 0.872222)
+texture = ExtResource("1_urmsr")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(157, 126)
-scale = Vector2(0.508013, 0.465812)
-texture = ExtResource("1_g3pup")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+[node name="StaticBody2D" type="StaticBody2D" parent="PunchingBag"]
 visible = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PunchingBag/StaticBody2D"]
 visible = false
 position = Vector2(0.825397, 50.654)
 shape = SubResource("CapsuleShape2D_8kmtd")
@@ -124,18 +63,18 @@ script = ExtResource("3_5idga")
 
 [node name="puncheffect" type="AnimatedSprite2D" parent="SkillCheck"]
 visible = false
-position = Vector2(144, 122)
+position = Vector2(126.75, 105.75)
+scale = Vector2(1.98571, 1.92857)
 sprite_frames = SubResource("SpriteFrames_p8txx")
 animation = &"effect"
-frame = 9
 frame_progress = 0.313251
 
 [node name="ProgressBar" type="ProgressBar" parent="SkillCheck"]
 modulate = Color(0.639216, 0.14902, 0.203922, 1)
-offset_left = 15.0
-offset_top = 89.0
-offset_right = 44.0
-offset_bottom = 241.0
+offset_left = 24.0
+offset_top = 74.0
+offset_right = 53.0
+offset_bottom = 226.0
 max_value = 10.0
 step = 1.0
 fill_mode = 3
@@ -162,5 +101,41 @@ texture = ExtResource("6_kob4j")
 position = Vector2(100, 280)
 scale = Vector2(0.102564, 0.0706319)
 texture = ExtResource("1_g3pup")
+
+[node name="RedGuy" type="Sprite2D" parent="."]
+position = Vector2(370, 95)
+scale = Vector2(0.101563, 0.257813)
+texture = ExtResource("6_kob4j")
+
+[node name="RedGuy2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(530, 243)
+scale = Vector2(0.101563, 0.257813)
+texture = ExtResource("6_kob4j")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="line1" type="TextEdit" parent="CanvasLayer"]
+offset_left = 428.0
+offset_top = 57.0
+offset_right = 571.0
+offset_bottom = 120.0
+theme_override_colors/background_color = Color(0.478431, 0.470588, 0.470588, 1)
+text = "Punch this 4 me
+"
+
+[node name="line2" type="TextEdit" parent="CanvasLayer"]
+visible = false
+offset_left = 323.0
+offset_top = 207.0
+offset_right = 482.0
+offset_bottom = 274.0
+text = "ur welcome
+"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(1.9, 2)
 
 [connection signal="animation_finished" from="SkillCheck/puncheffect" to="SkillCheck" method="_on_puncheffect_animation_finished"]

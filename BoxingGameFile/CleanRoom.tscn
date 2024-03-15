@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://wagxx6idl5vb"]
+
+[ext_resource type="Script" path="res://Furniture1.gd" id="1_qb5c7"]
+[ext_resource type="Texture2D" uid="uid://sb8s52cbpafs" path="res://boxingbagsprite.jpg" id="2_21fdj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jeu4h"]
+size = Vector2(109, 147)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8qpxo"]
+size = Vector2(49, 45)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 503.0
+offset_bottom = 267.0
+
+[node name="F1" type="CharacterBody2D" parent="."]
+position = Vector2(421, 188)
+script = ExtResource("1_qb5c7")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="F1"]
+position = Vector2(-3, 4)
+scale = Vector2(0.349359, 0.270911)
+texture = ExtResource("2_21fdj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="F1"]
+position = Vector2(-3.5, 3.5)
+shape = SubResource("RectangleShape2D_jeu4h")
+
+[node name="col1" type="Area2D" parent="."]
+position = Vector2(1, 4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="col1"]
+position = Vector2(25, 20)
+shape = SubResource("RectangleShape2D_8qpxo")
+
+[connection signal="area_entered" from="col1" to="F1" method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="col1" to="F1" method="_on_col_1_body_entered"]
