@@ -1,0 +1,99 @@
+[gd_scene load_steps=10 format=3 uid="uid://c2y025u28d20k"]
+
+[ext_resource type="AudioStream" uid="uid://bklitilgldg00" path="res://Yellow Game/T Blocks/T Block Nodes/Yellow_Patient_Theme.wav" id="1_mmxmb"]
+[ext_resource type="Texture2D" uid="uid://bh8emwhx0w4x2" path="res://Orange Game/DialogueBgOrange.png" id="2_0pccy"]
+[ext_resource type="PackedScene" uid="uid://bj062qtb8rnn5" path="res://Orange Game/orange_basket.tscn" id="3_db4fr"]
+[ext_resource type="Script" path="res://Orange Game/ScoreLabel.gd" id="4_3v1p4"]
+[ext_resource type="Script" path="res://Orange Game/OrangeManager.gd" id="5_gmiw6"]
+[ext_resource type="PackedScene" uid="uid://cchiwr4elf504" path="res://Orange Game/orange.tscn" id="6_gytij"]
+[ext_resource type="Texture2D" uid="uid://dcbubg4c31rma" path="res://Orange Game/Orange Graphic.png" id="7_ugs7u"]
+[ext_resource type="Script" path="res://Orange Game/OrangeGraphic.gd" id="8_bwrqj"]
+[ext_resource type="Texture2D" uid="uid://dckwf0otkdn5l" path="res://Orange Game/Eg Sheeran.png" id="9_88qaw"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(6.10352e-05, 3.05176e-05)
+stream = ExtResource("1_mmxmb")
+autoplay = true
+
+[node name="Office" type="Sprite2D" parent="."]
+position = Vector2(579, 326)
+scale = Vector2(3.84, 3.24)
+texture = ExtResource("2_0pccy")
+
+[node name="OrangeBasket" parent="." node_paths=PackedStringArray("manager") instance=ExtResource("3_db4fr")]
+position = Vector2(289, 573)
+manager = NodePath("../OrangeManager")
+
+[node name="ScoreLabel" type="RichTextLabel" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 161.0
+offset_bottom = 61.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 31
+text = "Score: "
+script = ExtResource("4_3v1p4")
+
+[node name="OrangeManager" type="Node2D" parent="."]
+script = ExtResource("5_gmiw6")
+Orange = ExtResource("6_gytij")
+Dialogue = "I love oranges."
+
+[node name="OrangeTimer" type="Timer" parent="OrangeManager"]
+wait_time = 1.5
+
+[node name="DialogueTimer" type="Timer" parent="OrangeManager"]
+wait_time = 5.0
+
+[node name="OrangeGraphic" type="Sprite2D" parent="." node_paths=PackedStringArray("OrangeTimer")]
+position = Vector2(295, 300)
+texture = ExtResource("7_ugs7u")
+script = ExtResource("8_bwrqj")
+OrangeTimer = NodePath("../OrangeManager/OrangeTimer")
+
+[node name="GraphicFadeTimer" type="Timer" parent="OrangeGraphic"]
+wait_time = 3.0
+one_shot = true
+
+[node name="EgSheeran" type="Sprite2D" parent="."]
+position = Vector2(1017, 486)
+scale = Vector2(0.743243, 0.752525)
+texture = ExtResource("9_88qaw")
+
+[node name="patientDialogue" type="RichTextLabel" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 635.0
+offset_top = 428.0
+offset_right = 908.0
+offset_bottom = 561.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 25
+text = "I love oranges."
+visible_characters = 0
+visible_ratio = 0.0
+script = ExtResource("4_3v1p4")
+
+[node name="playerDialogue" type="RichTextLabel" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 824.0
+offset_top = 117.0
+offset_right = 1097.0
+offset_bottom = 250.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 25
+text = "I love oranges."
+visible_characters = 0
+visible_ratio = 0.0
+script = ExtResource("4_3v1p4")
+
+[connection signal="timeout" from="OrangeManager/OrangeTimer" to="OrangeManager" method="_on_timer_timeout"]
+[connection signal="timeout" from="OrangeGraphic/GraphicFadeTimer" to="OrangeGraphic" method="_on_graphic_fade_timer_timeout"]
