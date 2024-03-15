@@ -1,7 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://dsj43j61lh6th"]
+[gd_scene load_steps=14 format=3 uid="uid://cptpx373nf5h5"]
 
 [ext_resource type="Script" path="res://EndCredits.gd" id="1_0pe8f"]
-[ext_resource type="Texture2D" uid="uid://bpgfbhpjtkoog" path="res://Assets/Main menu/CreditScene-Sheet.png" id="1_icldx"]
+[ext_resource type="Texture2D" uid="uid://d1uyrbj7acsku" path="res://Assets/Main menu/CreditScene-Sheet.png" id="1_icldx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qu80q"]
 atlas = ExtResource("1_icldx")
@@ -99,8 +99,13 @@ texture_filter = 2
 offset_left = 53.0
 offset_top = 165.0
 offset_right = 274.0
-offset_bottom = 745.0
+offset_bottom = 962.0
 text = "           Dr. Radiant
+   Made by Better Than
+   Quiggly Game Studios
+
+				 Lead
+Luna
 
                  Story
 Luna

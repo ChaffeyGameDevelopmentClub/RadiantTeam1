@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://duouw08gsyibk" path="res://Assets/Red/punchfin.png" id="4_r83eq"]
 [ext_resource type="Texture2D" uid="uid://bhumajjl1f8sj" path="res://BoxingGame/red.png" id="5_kvsgw"]
 [ext_resource type="Texture2D" uid="uid://bwew1s2ccgteq" path="res://BoxingGame/blackbar.png" id="6_kob4j"]
-[ext_resource type="Texture2D" uid="uid://bjtf0avwjmyla" path="res://Assets/Red/red1.png" id="8_hq5fv"]
+[ext_resource type="Texture2D" uid="uid://besjw2125r25s" path="res://Assets/Red/red1.png" id="8_hq5fv"]
 [ext_resource type="Texture2D" uid="uid://cwbmpti0qgku1" path="res://Assets/Blue/nextButton-export.png" id="9_fwh0e"]
 [ext_resource type="Texture2D" uid="uid://bwb37hhpfilng" path="res://Assets/Blue/hxhbook.png" id="10_eeq7p"]
 [ext_resource type="AudioStream" uid="uid://m4hpp6glfjh8" path="res://Assets/Red_Patient.wav" id="11_rq4q5"]
