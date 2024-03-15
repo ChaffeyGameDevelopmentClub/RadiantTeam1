@@ -31,9 +31,9 @@ var blueDialogue=["Hi doc. Ive been rotting\n in bed for like a week\n now all d
 "My room feels more clean\nnow. I almost wanna be\nproductive now.",
 "Im too broke to pay\nyou so heres my HxH\nvolume 11."]
 var therapistDialogue=["I can tell","Maybe you would feel\nbetter if we cleaned\nthis messy room",
-"Maybe start by\nmoving your bed\nto the corner.",
+"Maybe start by\nmoving your bed\nto the corner(WASD perchance)",
 "Move your desk to\nmaybe not in the middle\n of the room",
-"Put her somewhere on\nthe bed",
+"Put her somewhere on\nthe bed.(Click the bed maybe)",
 "I dont know what that is\nbut probaly on the\ndesk",
 "Well I hope you will be",
 "I still dont know what\nthat is but thank you"]

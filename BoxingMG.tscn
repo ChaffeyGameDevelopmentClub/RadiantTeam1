@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bwew1s2ccgteq" path="res://BoxingGame/blackbar.png" id="6_kob4j"]
 [ext_resource type="Texture2D" uid="uid://bjtf0avwjmyla" path="res://Assets/Red/red1.png" id="8_hq5fv"]
 [ext_resource type="Texture2D" uid="uid://cwbmpti0qgku1" path="res://Assets/Blue/nextButton-export.png" id="9_fwh0e"]
-[ext_resource type="Texture2D" uid="uid://bwb37hhpfilng" path="res://Assets/Blue/hxhbook.png" id="10_eeq7p"]
+[ext_resource type="Texture2D" uid="uid://bj3rylqjr580o" path="res://Assets/Red/boxing-glove.png" id="11_jebq4"]
 [ext_resource type="AudioStream" uid="uid://m4hpp6glfjh8" path="res://Assets/Red_Patient.wav" id="11_rq4q5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8kmtd"]
@@ -167,8 +167,9 @@ offset_bottom = 196.0
 color = Color(0.572549, 0.0901961, 0.0901961, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="FINAL"]
-position = Vector2(161, 52)
-texture = ExtResource("10_eeq7p")
+position = Vector2(142, 52)
+scale = Vector2(0.22524, 0.186102)
+texture = ExtResource("11_jebq4")
 
 [node name="TextEdit" type="RichTextLabel" parent="FINAL"]
 layout_mode = 0
