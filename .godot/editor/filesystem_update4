@@ -1,6 +1,5 @@
-res://BoxingMG.tscn
-res://CleaningRoom.tscn
 res://EndCredits.tscn
+<<<<<<< Updated upstream
 res://Assets/Yellow/Yellow Game/yellow_game.tscn
 res://Assets/Orange/Orange Game/orange_game.tscn
 <<<<<<< HEAD
@@ -10,3 +9,14 @@ res://level_selection.tscn
 =======
 res://Assets/Yellow/Yellow Game/player_block.tscn
 >>>>>>> Quin/Programming
+=======
+res://CleaningRoom.tscn
+res://BoxingMG.tscn
+res://Bed.gd
+res://SkillCheck.gd
+res://main.tscn
+res://level_selection.tscn
+res://menu.tscn
+res://main.gd
+res://Level_Selection.gd
+>>>>>>> Stashed changes

@@ -21,7 +21,7 @@ var dialogueRed=["Yeah you know, stop punching\nholes in the wall in the break\n
 "Wow, man, this is really some\nfire stuff you've shown me doc,\nI feel like I could send a thousand emails right now!",
 "Here dude, I have a\nfeeling these things\nwill only slow me down."]
 var dialogueTherapist=["I see, I think I know what you mean. Why don't we see if we can work that out in a… healthier manner?",
-"Good",". . . Just punch the bag",
+"Good",". . . Just punch the bag(space idk)",
 "Thanks, but I think I'll pass on\nruining my knuckles",
 "Therapy is what works for\nyou… man. Im happy you found peace in throwing punches",
 "Thanks but please\ndon't break any\nmore electronics."]
@@ -76,3 +76,7 @@ func effectplace():
 
 
 
+
+
+func _on_phone_book_button_down():
+	get_tree().change_scene_to_file("res://level_selection.tscn")

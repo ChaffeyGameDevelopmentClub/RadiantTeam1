@@ -7,9 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://duouw08gsyibk" path="res://Assets/Red/punchfin.png" id="4_r83eq"]
 [ext_resource type="Texture2D" uid="uid://bhumajjl1f8sj" path="res://BoxingGame/red.png" id="5_kvsgw"]
 [ext_resource type="Texture2D" uid="uid://bwew1s2ccgteq" path="res://BoxingGame/blackbar.png" id="6_kob4j"]
-[ext_resource type="Texture2D" uid="uid://besjw2125r25s" path="res://Assets/Red/red1.png" id="8_hq5fv"]
+[ext_resource type="Texture2D" uid="uid://bjtf0avwjmyla" path="res://Assets/Red/red1.png" id="8_hq5fv"]
 [ext_resource type="Texture2D" uid="uid://cwbmpti0qgku1" path="res://Assets/Blue/nextButton-export.png" id="9_fwh0e"]
-[ext_resource type="Texture2D" uid="uid://bwb37hhpfilng" path="res://Assets/Blue/hxhbook.png" id="10_eeq7p"]
+[ext_resource type="Texture2D" uid="uid://b65bnv22o3psh" path="res://Assets/Red/boxing-glove.png" id="11_jebq4"]
 [ext_resource type="AudioStream" uid="uid://m4hpp6glfjh8" path="res://Assets/Red_Patient.wav" id="11_rq4q5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8kmtd"]
@@ -167,8 +167,9 @@ offset_bottom = 196.0
 color = Color(0.572549, 0.0901961, 0.0901961, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="FINAL"]
-position = Vector2(161, 52)
-texture = ExtResource("10_eeq7p")
+position = Vector2(152.625, 54.375)
+scale = Vector2(0.232029, 0.23123)
+texture = ExtResource("11_jebq4")
 
 [node name="TextEdit" type="RichTextLabel" parent="FINAL"]
 layout_mode = 0
@@ -177,6 +178,7 @@ offset_top = 32.0
 offset_right = 153.0
 offset_bottom = 82.0
 scale = Vector2(0.6, 0.6)
+mouse_filter = 2
 text = "Gift Recieved"
 
 [node name="TextEdit2" type="TextEdit" parent="FINAL"]
@@ -187,10 +189,10 @@ offset_top = 150.0
 offset_right = 435.0
 offset_bottom = 190.0
 scale = Vector2(0.6, 0.6)
+mouse_filter = 2
 text = "   Back to Phone book"
 
 [node name="PhoneBook" type="TextureButton" parent="FINAL"]
-visible = false
 layout_mode = 0
 offset_left = 48.0
 offset_top = 92.0
@@ -199,3 +201,4 @@ offset_bottom = 119.0
 
 [connection signal="animation_finished" from="SkillCheck/puncheffect" to="SkillCheck" method="_on_puncheffect_animation_finished"]
 [connection signal="pressed" from="CanvasLayer/textButton" to="SkillCheck" method="_on_text_button_pressed"]
+[connection signal="button_down" from="FINAL/PhoneBook" to="SkillCheck" method="_on_phone_book_button_down"]

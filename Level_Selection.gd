@@ -1,57 +1,24 @@
 extends Control
-@onready var pause_button = $Pause_Button
-var is_paused := false
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	
-	
-	var Pause = false
-
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	
-	if Input.is_action_just_pressed("Pause"):
-		Pause_Menu()
-
-func Pause_Menu():
-	if is_paused:
-		pause_button.hide()
-		Engine.time_scale = 1 
-	else:
-		pause_button.show()
-		Engine.time_scale = 0 
-	
-	is_paused = !is_paused
-
-
-func _on_red_pressed():
-	
-	get_tree().change_scene()
-	
-	
-	
-
-func _on_orange_pressed():
-	get_tree().change_scene()
+@onready var redButton:TextureButton=$RedScene
+@onready var orangeButton:TextureButton=$OrangeScene
+@onready var yellowButton:TextureButton=$YellowScene
+@onready var blueButton:TextureButton=$BlueScene4
 
 
 
 
-func _on_yellow_pressed():
-	get_tree().change_scene()
+func _on_red_scene_button_down():
+	get_tree().change_scene_to_file("res://BoxingMG.tscn")
 
 
-func _on_blue_pressed():
-	get_tree().change_scene()
+func _on_orange_scene_button_down():
+	get_tree().change_scene_to_file("res://Assets/Orange/Orange Game/orange_game.tscn")
 
 
-#func Pause_Menu():
-	#if Pause:
-		#Pause.hide()
-		#Engine.time_scale = 1 
-	#else:
-		#Pause.show()
-		#Engine.time_scale = 0 
-	
+func _on_yellow_scene_button_down():
+	get_tree().change_scene_to_file("res://Assets/Yellow/Yellow Game/yellow_game.tscn")
+
+
+func _on_blue_scene_4_button_down():
+	get_tree().change_scene_to_file("res://CleaningRoom.tscn")

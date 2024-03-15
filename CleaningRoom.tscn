@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dbco6pm0y8872"]
+[gd_scene load_steps=13 format=3 uid="uid://dbco6pm0y8872"]
 
 [ext_resource type="Script" path="res://Bed.gd" id="1_3fqp4"]
 [ext_resource type="Texture2D" uid="uid://d1w34f1b17sbg" path="res://Assets/Blue/DialogueBgBlue.png" id="1_g5cl3"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://dv1s808gfnp66" path="res://Assets/Blue/bed.png" id="3_qegr3"]
 [ext_resource type="Texture2D" uid="uid://0bmrhf2n4s2i" path="res://Assets/Blue/desk.png" id="4_3d6kl"]
 [ext_resource type="Texture2D" uid="uid://cwbmpti0qgku1" path="res://Assets/Blue/nextButton-export.png" id="4_jl032"]
-[ext_resource type="Texture2D" uid="uid://bhumajjl1f8sj" path="res://BoxingGame/red.png" id="4_vixrg"]
 [ext_resource type="Texture2D" uid="uid://dwt1f1utkb30u" path="res://Assets/Blue/catGirl.png" id="5_63xgf"]
 [ext_resource type="Texture2D" uid="uid://di4rmkmkp6ew3" path="res://Assets/Blue/catpixel.png" id="6_qb8bs"]
 [ext_resource type="Texture2D" uid="uid://bwb37hhpfilng" path="res://Assets/Blue/hxhbook.png" id="7_kymk3"]
@@ -75,8 +74,8 @@ now all depressed"
 texture_filter = 2
 offset_left = 255.0
 offset_top = 162.0
-offset_right = 370.0
-offset_bottom = 221.0
+offset_right = 430.0
+offset_bottom = 245.0
 scale = Vector2(0.6, 0.6)
 theme_override_font_sizes/normal_font_size = 0
 text = "I can tell"
@@ -129,7 +128,6 @@ texture = ExtResource("5_63xgf")
 [node name="Therapist" type="Sprite2D" parent="."]
 position = Vector2(409, 187)
 scale = Vector2(0.158203, 0.206055)
-texture = ExtResource("4_vixrg")
 
 [node name="cat" type="Sprite2D" parent="."]
 position = Vector2(179, 204)
@@ -182,10 +180,10 @@ offset_top = 114.0
 offset_right = 354.0
 offset_bottom = 157.0
 scale = Vector2(0.6, 0.6)
+mouse_filter = 2
 text = "   Back to Phone book"
 
 [node name="PhoneBook" type="TextureButton" parent="FINAL"]
-visible = false
 layout_mode = 0
 offset_left = 48.0
 offset_top = 92.0
@@ -197,3 +195,4 @@ offset_bottom = 119.0
 [connection signal="input_event" from="Control" to="BedArea" method="_on_control_input_event"]
 [connection signal="button_down" from="CanvasLayer/button" to="Control" method="_on_texture_button_button_down"]
 [connection signal="body_entered" from="ShelfArea" to="Control" method="_on_shelf_area_body_entered"]
+[connection signal="button_down" from="FINAL/PhoneBook" to="Control" method="_on_phone_book_button_down"]

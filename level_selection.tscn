@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dev020ce1brx1"]
+[gd_scene load_steps=34 format=3 uid="uid://bpsxwdgxndx4j"]
 
 [ext_resource type="Script" path="res://Level_Selection.gd" id="1_cnbqw"]
 [ext_resource type="Texture2D" uid="uid://bt8hi0carpgt6" path="res://PhoneBook.png" id="2_tllpj"]
@@ -9,7 +9,15 @@
 [ext_resource type="Script" path="res://Yellow.gd" id="4_sw15o"]
 [ext_resource type="Texture2D" uid="uid://dc38yngwa77as" path="res://egg1.png" id="6_elrlh"]
 [ext_resource type="Texture2D" uid="uid://by1fq46dc2gks" path="res://yellow1.png" id="8_wmms4"]
-[ext_resource type="PackedScene" uid="uid://b8v60ra1tqkij" path="res://pause_button.tscn" id="10_8trsf"]
+[ext_resource type="PackedScene" path="res://pause_button.tscn" id="10_8trsf"]
+[ext_resource type="Texture2D" uid="uid://ca7ke4qs7nsom" path="res://Level Selection Redpng.png" id="11_7hduw"]
+[ext_resource type="Texture2D" uid="uid://c4ufh4uei3b8j" path="res://Level Selection Red Clicked .png" id="12_w5kl4"]
+[ext_resource type="Texture2D" uid="uid://c3aq8e148sps4" path="res://Level Selection Orange .png" id="13_n2h1f"]
+[ext_resource type="Texture2D" uid="uid://du3a4nmh0k5w8" path="res://Level Selection Orange Clicked .png" id="14_fkon7"]
+[ext_resource type="Texture2D" uid="uid://dhp2k2bi1a1wu" path="res://Level Selection Yellow.png" id="15_ny515"]
+[ext_resource type="Texture2D" uid="uid://vrdc6bvdg8dy" path="res://Level Selection Yellow Clicked .png" id="16_3en2k"]
+[ext_resource type="Texture2D" uid="uid://1trna2uswovc" path="res://Level Selection Blue .png" id="17_p556r"]
+[ext_resource type="Texture2D" uid="uid://cnmfa6gjn2mau" path="res://Level Selection Blue Clicked .png" id="18_yv1f6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6f4sf"]
 
@@ -117,7 +125,82 @@ offset_top = 142.0
 offset_right = -651.0
 offset_bottom = -75.0
 
+[node name="RedScene" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 130.0
+offset_right = 656.0
+offset_bottom = 290.0
+texture_normal = ExtResource("11_7hduw")
+texture_pressed = ExtResource("12_w5kl4")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RedScene"]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 32.0
+offset_right = 287.0
+offset_bottom = 109.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 50
+text = "Play"
+
+[node name="OrangeScene" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 677.0
+offset_top = 130.0
+offset_right = 997.0
+offset_bottom = 290.0
+texture_normal = ExtResource("13_n2h1f")
+texture_pressed = ExtResource("14_fkon7")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="OrangeScene"]
+offset_left = 94.0
+offset_top = 32.0
+offset_right = 287.0
+offset_bottom = 109.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 50
+text = "Play"
+
+[node name="YellowScene" type="TextureButton" parent="."]
+offset_left = 671.0
+offset_top = 352.0
+offset_right = 991.0
+offset_bottom = 512.0
+texture_normal = ExtResource("15_ny515")
+texture_pressed = ExtResource("16_3en2k")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="YellowScene"]
+offset_left = 94.0
+offset_top = 32.0
+offset_right = 287.0
+offset_bottom = 109.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 50
+text = "Play"
+
+[node name="BlueScene4" type="TextureButton" parent="."]
+offset_left = 324.0
+offset_top = 350.0
+offset_right = 644.0
+offset_bottom = 510.0
+texture_normal = ExtResource("17_p556r")
+texture_pressed = ExtResource("18_yv1f6")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="BlueScene4"]
+offset_left = 94.0
+offset_top = 32.0
+offset_right = 287.0
+offset_bottom = 109.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 50
+text = "Play"
+
 [connection signal="pressed" from="Red" to="." method="_on_red_pressed"]
 [connection signal="pressed" from="Blue" to="." method="_on_blue_pressed"]
 [connection signal="pressed" from="Orange" to="." method="_on_orange_pressed"]
 [connection signal="pressed" from="Yellow" to="." method="_on_yellow_pressed"]
+[connection signal="button_down" from="RedScene" to="." method="_on_red_scene_button_down"]
+[connection signal="button_down" from="OrangeScene" to="." method="_on_orange_scene_button_down"]
+[connection signal="button_down" from="YellowScene" to="." method="_on_yellow_scene_button_down"]
+[connection signal="button_down" from="BlueScene4" to="." method="_on_blue_scene_4_button_down"]

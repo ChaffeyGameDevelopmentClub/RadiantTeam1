@@ -109,3 +109,7 @@ func _on_texture_button_button_down():
 
 func _on_audio_stream_player_finished():
 	$"../BackGround/AudioStreamPlayer".play()
+
+
+func _on_phone_book_button_down():
+	get_tree().change_scene_to_file("res://EndCredits.tscn")
