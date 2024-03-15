@@ -1,0 +1,157 @@
+[gd_scene load_steps=14 format=3 uid="uid://dbjw6sxw768q2"]
+
+[ext_resource type="Texture2D" uid="uid://7c06coc5al4u" path="res://Assets/Yellow/Yellow Game/DialogueBgYellow.png" id="1_fdyxo"]
+[ext_resource type="AudioStream" uid="uid://bklitilgldg00" path="res://Assets/Yellow/Yellow Game/T Blocks/T Block Nodes/Yellow_Patient_Theme.wav" id="1_rusdx"]
+[ext_resource type="Script" path="res://Assets/Yellow/AudioStreamPlayer2D.gd" id="2_ly55d"]
+[ext_resource type="Script" path="res://Assets/Yellow/Yellow Game/DemolitionBox.gd" id="3_n4riw"]
+[ext_resource type="Texture2D" uid="uid://dcbubg4c31rma" path="res://Assets/Orange/Orange Game/Orange Graphic.png" id="4_5g428"]
+[ext_resource type="Script" path="res://Assets/Yellow/Yellow Game/yellowManager.gd" id="4_57ttc"]
+[ext_resource type="PackedScene" uid="uid://3ixgu3opddmx" path="res://Assets/Yellow/Yellow Game/player_block.tscn" id="4_p211n"]
+[ext_resource type="Script" path="res://Assets/Yellow/Yellow Game/YellowGraphic.gd" id="5_2gly5"]
+[ext_resource type="Texture2D" uid="uid://ct68tesfuno00" path="res://Assets/Yellow/Yellow Game/DialogueBgYellow2.png" id="5_bilf7"]
+[ext_resource type="Texture2D" uid="uid://rfrrehiunpyu" path="res://Assets/Yellow/Yellow Game/T Blocks/T1.png" id="5_trib3"]
+[ext_resource type="Texture2D" uid="uid://e1snlda0bd0g" path="res://Assets/Yellow/Yellow Game/yellow1.png" id="11_vw45u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pou5c"]
+size = Vector2(350, 82)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vr6qf"]
+size = Vector2(568, 46)
+
+[node name="BlockScene" type="Node2D"]
+
+[node name="DialogueBgYellow" type="Sprite2D" parent="."]
+position = Vector2(578.5, 331)
+scale = Vector2(3.85667, 3.3)
+texture = ExtResource("1_fdyxo")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_rusdx")
+autoplay = true
+script = ExtResource("2_ly55d")
+
+[node name="YellowGraphic" type="Sprite2D" parent="." node_paths=PackedStringArray("YellowTimer")]
+position = Vector2(289, 381)
+texture = ExtResource("4_5g428")
+script = ExtResource("5_2gly5")
+YellowTimer = NodePath("../yellowManager/YellowTimer")
+
+[node name="GraphicFadeTimer" type="Timer" parent="YellowGraphic"]
+wait_time = 3.0
+one_shot = true
+
+[node name="yellowManager" type="Node2D" parent="."]
+position = Vector2(357, 1)
+script = ExtResource("4_57ttc")
+
+[node name="YellowTimer" type="Timer" parent="yellowManager"]
+wait_time = 1.5
+
+[node name="DialogueTimer" type="Timer" parent="yellowManager"]
+wait_time = 3.0
+one_shot = true
+
+[node name="DemolitionBox" type="Area2D" parent="."]
+position = Vector2(357, 1)
+script = ExtResource("3_n4riw")
+metadata/_edit_group_ = true
+
+[node name="RedArea" type="ColorRect" parent="DemolitionBox"]
+offset_left = 420.0
+offset_top = 520.0
+offset_right = 770.0
+offset_bottom = 602.0
+color = Color(1, 0, 0, 1)
+
+[node name="DemolitionCollision" type="CollisionShape2D" parent="DemolitionBox"]
+position = Vector2(595, 561)
+shape = SubResource("RectangleShape2D_pou5c")
+
+[node name="DialogueBgYellow2" type="Sprite2D" parent="."]
+position = Vector2(863, 330.5)
+scale = Vector2(3.89333, 3.285)
+texture = ExtResource("5_bilf7")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(500, 86)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-216, 541)
+shape = SubResource("RectangleShape2D_vr6qf")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = -500.0
+offset_top = 518.0
+offset_right = 68.0
+offset_bottom = 564.0
+color = Color(1, 1, 0, 1)
+
+[node name="PlayerBlock" parent="." instance=ExtResource("4_p211n")]
+position = Vector2(276, 100)
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+offset_top = -2.0
+offset_right = 47.0
+offset_bottom = 660.0
+color = Color(0.196078, 0.196078, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="ColorRect4"]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 4.0
+offset_right = 573.0
+offset_bottom = 666.0
+color = Color(0.196078, 0.196078, 0, 1)
+
+[node name="scoreText" type="RichTextLabel" parent="."]
+offset_left = 589.0
+offset_top = 13.0
+offset_right = 822.0
+offset_bottom = 47.0
+text = "Score: 0"
+
+[node name="turnsText" type="RichTextLabel" parent="."]
+offset_left = 588.0
+offset_top = 31.0
+offset_right = 821.0
+offset_bottom = 65.0
+text = "Next demolition in 0 turns"
+
+[node name="demolitionsText" type="RichTextLabel" parent="."]
+offset_left = 588.0
+offset_top = 50.0
+offset_right = 821.0
+offset_bottom = 84.0
+text = "Demolitions left: 4"
+
+[node name="NextBlock" type="Sprite2D" parent="."]
+position = Vector2(1074, 32)
+texture = ExtResource("5_trib3")
+
+[node name="Yellow1" type="Sprite2D" parent="."]
+position = Vector2(1020, 496)
+scale = Vector2(0.716216, 0.727273)
+texture = ExtResource("11_vw45u")
+
+[node name="patientDialogue" type="RichTextLabel" parent="."]
+offset_left = 623.0
+offset_top = 435.0
+offset_right = 895.0
+offset_bottom = 569.0
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="playerDialogue" type="RichTextLabel" parent="."]
+offset_left = 818.0
+offset_top = 118.0
+offset_right = 1090.0
+offset_bottom = 252.0
+text = "Orange time"
+visible_characters = 0
+visible_ratio = 0.0
+
+[connection signal="finished" from="AudioStreamPlayer2D" to="AudioStreamPlayer2D" method="_on_finished"]
+[connection signal="timeout" from="YellowGraphic/GraphicFadeTimer" to="YellowGraphic" method="_on_graphic_fade_timer_timeout"]
+[connection signal="timeout" from="YellowGraphic/GraphicFadeTimer" to="yellowManager" method="_on_graphic_fade_timer_timeout"]
+[connection signal="timeout" from="yellowManager/DialogueTimer" to="yellowManager" method="_on_dialogue_timer_timeout"]
+[connection signal="body_entered" from="DemolitionBox" to="DemolitionBox" method="_on_body_entered"]

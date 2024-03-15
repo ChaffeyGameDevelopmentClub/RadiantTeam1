@@ -1,0 +1,27 @@
+[gd_scene load_steps=10 format=3 uid="uid://3ixgu3opddmx"]
+
+[ext_resource type="Script" path="res://Assets/Yellow/Yellow Game/player_block.gd" id="1_u4ogy"]
+[ext_resource type="PackedScene" uid="uid://ci0i5ptvrvlnk" path="res://Assets/Yellow/Yellow Game/T Blocks/T Block Nodes/T1.tscn" id="2_ksm3f"]
+[ext_resource type="PackedScene" uid="uid://ckx0p436j3een" path="res://Assets/Yellow/Yellow Game/T Blocks/T Block Nodes/T2.tscn" id="3_8nhoc"]
+[ext_resource type="PackedScene" uid="uid://dh05plqr5ulik" path="res://Assets/Yellow/Yellow Game/T Blocks/T Block Nodes/T3.tscn" id="4_mychb"]
+[ext_resource type="PackedScene" uid="uid://bwk7h7q7q6o8c" path="res://Assets/Yellow/Yellow Game/T Blocks/T Block Nodes/T4.tscn" id="5_cim30"]
+[ext_resource type="PackedScene" uid="uid://brbqcrij6q364" path="res://Assets/Yellow/Yellow Game/T Blocks/T Block Nodes/T5.tscn" id="6_pw8vv"]
+[ext_resource type="PackedScene" uid="uid://bgexc161egbad" path="res://Assets/Yellow/Yellow Game/T Blocks/T Block Nodes/T6.tscn" id="7_x2h5x"]
+[ext_resource type="PackedScene" uid="uid://d70h7jovntj" path="res://Assets/Yellow/Yellow Game/T Blocks/T Block Nodes/T7.tscn" id="8_jjbak"]
+[ext_resource type="Texture2D" uid="uid://cxticigh6etj5" path="res://Assets/Yellow/Yellow Game/T Blocks/T7.png" id="9_li1s5"]
+
+[node name="PlayerBlock" type="CharacterBody2D"]
+script = ExtResource("1_u4ogy")
+T1 = ExtResource("2_ksm3f")
+T2 = ExtResource("3_8nhoc")
+T3 = ExtResource("4_mychb")
+T4 = ExtResource("5_cim30")
+T5 = ExtResource("6_pw8vv")
+T6 = ExtResource("7_x2h5x")
+T7 = ExtResource("8_jjbak")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="playerBlockSprite" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+texture = ExtResource("9_li1s5")

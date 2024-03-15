@@ -1,85 +1,199 @@
-[gd_scene load_steps=8 format=3 uid="uid://5tfappstaw45"]
+[gd_scene load_steps=14 format=3 uid="uid://dbco6pm0y8872"]
 
 [ext_resource type="Script" path="res://Bed.gd" id="1_3fqp4"]
-[ext_resource type="Texture2D" path="res://BoxingGame/boxingbagsprite.jpg" id="2_a53k8"]
-[ext_resource type="Script" path="res://BedTarget.gd" id="3_by21m"]
-[ext_resource type="Script" path="res://Book.gd" id="4_g3c0s"]
+[ext_resource type="Texture2D" uid="uid://d1w34f1b17sbg" path="res://Assets/Blue/DialogueBgBlue.png" id="1_g5cl3"]
+[ext_resource type="AudioStream" uid="uid://n55t262jvy1o" path="res://Assets/Assets_Audio_Blue Patient Minigame_Blue_Patient_Final.wav" id="2_jbj7h"]
+[ext_resource type="Texture2D" uid="uid://dv1s808gfnp66" path="res://Assets/Blue/bed.png" id="3_qegr3"]
+[ext_resource type="Texture2D" uid="uid://0bmrhf2n4s2i" path="res://Assets/Blue/desk.png" id="4_3d6kl"]
+[ext_resource type="Texture2D" uid="uid://cwbmpti0qgku1" path="res://Assets/Blue/nextButton-export.png" id="4_jl032"]
+[ext_resource type="Texture2D" uid="uid://bhumajjl1f8sj" path="res://BoxingGame/red.png" id="4_vixrg"]
+[ext_resource type="Texture2D" uid="uid://dwt1f1utkb30u" path="res://Assets/Blue/catGirl.png" id="5_63xgf"]
+[ext_resource type="Texture2D" uid="uid://di4rmkmkp6ew3" path="res://Assets/Blue/catpixel.png" id="6_qb8bs"]
+[ext_resource type="Texture2D" uid="uid://bwb37hhpfilng" path="res://Assets/Blue/hxhbook.png" id="7_kymk3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6oqvv"]
-size = Vector2(16, 15)
+size = Vector2(19, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ra3wb"]
-size = Vector2(73, 114)
+size = Vector2(73, 108)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_byqph"]
-size = Vector2(45.5, 26.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xah1k"]
+size = Vector2(87, 32)
 
 [node name="Node2D" type="Node2D"]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 466.0
-offset_bottom = 245.0
-color = Color(0.517647, 0.560784, 0.6, 1)
+[node name="BackGround" type="Sprite2D" parent="."]
+position = Vector2(232.5, 123.5)
+scale = Vector2(1.53667, 1.265)
+texture = ExtResource("1_g5cl3")
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-offset_left = 233.0
-offset_top = 1.0
-offset_right = 466.0
-offset_bottom = 244.0
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="BackGround"]
+stream = ExtResource("2_jbj7h")
+autoplay = true
 
 [node name="BedArea" type="Area2D" parent="."]
-script = ExtResource("3_by21m")
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BedArea"]
+position = Vector2(9.5, 7.5)
+shape = SubResource("RectangleShape2D_6oqvv")
 
 [node name="BedTarget" type="ColorRect" parent="BedArea"]
-offset_right = 82.0
-offset_bottom = 125.0
-color = Color(0.752941, 0.752941, 0.752941, 1)
-
-[node name="BedTarget2" type="ColorRect" parent="BedArea/BedTarget"]
-offset_left = -2.0
-offset_right = 74.0
+offset_right = 76.0
 offset_bottom = 118.0
 color = Color(0.160784, 0.592157, 0.839216, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BedArea"]
-position = Vector2(8, 6.5)
-shape = SubResource("RectangleShape2D_6oqvv")
-
-[node name="Bed" type="CharacterBody2D" parent="."]
-position = Vector2(160, 126)
+[node name="Control" type="CharacterBody2D" parent="."]
+position = Vector2(156, 28)
 script = ExtResource("1_3fqp4")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed"]
-position = Vector2(31.5, 52)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control"]
+position = Vector2(31.5, 55)
 shape = SubResource("RectangleShape2D_ra3wb")
 
-[node name="Sprite2D" type="Sprite2D" parent="Bed"]
-position = Vector2(31, 52)
-scale = Vector2(0.240385, 0.222119)
-texture = ExtResource("2_a53k8")
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+position = Vector2(32.5, 46)
+scale = Vector2(2.01, 1.94)
+texture = ExtResource("3_qegr3")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
 
-[node name="TextEdit" type="TextEdit" parent="CanvasLayer"]
-offset_left = 265.0
-offset_top = 12.0
-offset_right = 432.0
-offset_bottom = 47.0
-theme_override_colors/background_color = Color(0.552941, 0.552941, 0.552941, 1)
-text = "Move Bed into place"
+[node name="TextEdit" type="RichTextLabel" parent="CanvasLayer"]
+texture_filter = 2
+offset_left = 330.0
+offset_top = 40.0
+offset_right = 517.0
+offset_bottom = 128.0
+scale = Vector2(0.6, 0.6)
+text = "Hi doc I've been rotting 
+in bed for like a week
+now all depressed"
 
-[node name="Book" type="CharacterBody2D" parent="."]
-position = Vector2(180, 40)
-scale = Vector2(0.147436, 0.0446097)
-script = ExtResource("4_g3c0s")
+[node name="TextEdit2" type="RichTextLabel" parent="CanvasLayer"]
+texture_filter = 2
+offset_left = 255.0
+offset_top = 162.0
+offset_right = 370.0
+offset_bottom = 221.0
+scale = Vector2(0.6, 0.6)
+theme_override_font_sizes/normal_font_size = 0
+text = "I can tell"
 
-[node name="Sprite2D" type="Sprite2D" parent="Book"]
-texture = ExtResource("2_a53k8")
+[node name="button" type="TextureButton" parent="CanvasLayer"]
+offset_left = 396.0
+offset_top = 215.0
+offset_right = 3276.0
+offset_bottom = 1855.0
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("4_jl032")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Book"]
-position = Vector2(5.08716, 16.8125)
-scale = Vector2(6.78261, 22.4167)
-shape = SubResource("RectangleShape2D_byqph")
+[node name="ShelfArea" type="Area2D" parent="."]
+visible = false
+top_level = true
+position = Vector2(126, 24)
+metadata/_edit_group_ = true
 
-[connection signal="body_entered" from="BedArea" to="Bed" method="_on_bed_area_body_entered"]
+[node name="ColorRect" type="ColorRect" parent="ShelfArea"]
+offset_left = -15.0
+offset_top = -22.0
+offset_right = 72.0
+offset_bottom = 10.0
+color = Color(0.160784, 0.592157, 0.839216, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShelfArea"]
+show_behind_parent = true
+position = Vector2(28.5, -6)
+shape = SubResource("RectangleShape2D_xah1k")
+disabled = true
+
+[node name="ShelfSprite" type="Sprite2D" parent="."]
+top_level = true
+position = Vector2(64.4, 195)
+scale = Vector2(2, 1.5)
+texture = ExtResource("4_3d6kl")
+
+[node name="BedSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(42, 66)
+scale = Vector2(2.1615, 1.9)
+texture = ExtResource("3_qegr3")
+
+[node name="BlueGirl" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(286, 63)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_63xgf")
+
+[node name="Therapist" type="Sprite2D" parent="."]
+position = Vector2(409, 187)
+scale = Vector2(0.158203, 0.206055)
+texture = ExtResource("4_vixrg")
+
+[node name="cat" type="Sprite2D" parent="."]
+position = Vector2(179, 204)
+scale = Vector2(1.5625, 1)
+texture = ExtResource("6_qb8bs")
+
+[node name="book" type="Sprite2D" parent="."]
+top_level = true
+position = Vector2(102, 105)
+scale = Vector2(0.594, 0.5)
+texture = ExtResource("7_kymk3")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(2.5, 2.6)
+
+[node name="finalShelf" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(150, 40)
+scale = Vector2(1.94, 1.32)
+texture = ExtResource("4_3d6kl")
+
+[node name="FINAL" type="ColorRect" parent="."]
+visible = false
+top_level = true
+offset_left = 121.0
+offset_top = 24.0
+offset_right = 318.0
+offset_bottom = 153.0
+color = Color(0.796078, 0.858824, 0.988235, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="FINAL"]
+position = Vector2(136, 46)
+texture = ExtResource("7_kymk3")
+
+[node name="TextEdit" type="RichTextLabel" parent="FINAL"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 35.0
+offset_right = 128.0
+offset_bottom = 65.0
+scale = Vector2(0.6, 0.6)
+text = "Gift Recieved"
+
+[node name="TextEdit2" type="TextEdit" parent="FINAL"]
+top_level = true
+layout_mode = 0
+offset_left = 169.0
+offset_top = 114.0
+offset_right = 354.0
+offset_bottom = 157.0
+scale = Vector2(0.6, 0.6)
+text = "   Back to Phone book"
+
+[node name="PhoneBook" type="TextureButton" parent="FINAL"]
+visible = false
+layout_mode = 0
+offset_left = 48.0
+offset_top = 92.0
+offset_right = 160.0
+offset_bottom = 119.0
+
+[connection signal="finished" from="BackGround/AudioStreamPlayer" to="Control" method="_on_audio_stream_player_finished"]
+[connection signal="body_entered" from="BedArea" to="Control" method="_on_bed_area_body_entered"]
+[connection signal="input_event" from="Control" to="BedArea" method="_on_control_input_event"]
+[connection signal="button_down" from="CanvasLayer/button" to="Control" method="_on_texture_button_button_down"]
+[connection signal="body_entered" from="ShelfArea" to="Control" method="_on_shelf_area_body_entered"]

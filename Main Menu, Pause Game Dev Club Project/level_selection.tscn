@@ -1,0 +1,69 @@
+[gd_scene load_steps=11 format=3 uid="uid://dmh0qnl5ic666"]
+
+[ext_resource type="Script" path="res://Level_Selection.gd" id="1_cnbqw"]
+[ext_resource type="Texture2D" uid="uid://vwk1a6ovfhr8" path="res://PhoneBook V1.png" id="2_bw1tr"]
+[ext_resource type="Script" path="res://Blue.gd" id="2_xuii3"]
+[ext_resource type="Texture2D" uid="uid://ca7ke4qs7nsom" path="res://Level Selection Redpng.png" id="3_3iori"]
+[ext_resource type="Script" path="res://Orange.gd" id="3_20g7r"]
+[ext_resource type="Texture2D" uid="uid://1trna2uswovc" path="res://Level Selection Blue .png" id="4_d86a0"]
+[ext_resource type="Script" path="res://Yellow.gd" id="4_sw15o"]
+[ext_resource type="Texture2D" uid="uid://c3aq8e148sps4" path="res://Level Selection Orange .png" id="6_10mdn"]
+[ext_resource type="Texture2D" uid="uid://dhp2k2bi1a1wu" path="res://Level Selection Yellow.png" id="8_v782n"]
+[ext_resource type="PackedScene" uid="uid://dk28qje72fe31" path="res://pause_button.tscn" id="10_8trsf"]
+
+[node name="Level_Selection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cnbqw")
+
+[node name="PhoneBook" type="Sprite2D" parent="."]
+position = Vector2(560, 326)
+scale = Vector2(0.284167, 0.284167)
+texture = ExtResource("2_bw1tr")
+
+[node name="Red" type="Button" parent="PhoneBook"]
+offset_left = -844.575
+offset_top = -774.193
+offset_right = -516.575
+offset_bottom = -606.193
+icon = ExtResource("3_3iori")
+
+[node name="Blue" type="Button" parent="PhoneBook"]
+offset_left = -756.598
+offset_top = -337.83
+offset_right = -428.598
+offset_bottom = -169.83
+icon = ExtResource("4_d86a0")
+script = ExtResource("2_xuii3")
+
+[node name="Orange" type="Button" parent="PhoneBook"]
+offset_left = 91.4956
+offset_top = -453.959
+offset_right = 419.496
+offset_bottom = -285.959
+icon = ExtResource("6_10mdn")
+script = ExtResource("3_20g7r")
+
+[node name="Yellow" type="Button" parent="PhoneBook"]
+offset_left = 404.692
+offset_top = 109.091
+offset_right = 732.692
+offset_bottom = 277.091
+icon = ExtResource("8_v782n")
+script = ExtResource("4_sw15o")
+
+[node name="Pause_Button" parent="." instance=ExtResource("10_8trsf")]
+layout_mode = 1
+offset_left = 417.0
+offset_top = 94.0
+offset_right = -477.0
+offset_bottom = -123.0
+
+[connection signal="pressed" from="PhoneBook/Red" to="." method="_on_red_pressed"]
+[connection signal="pressed" from="PhoneBook/Blue" to="." method="_on_blue_pressed"]
+[connection signal="pressed" from="PhoneBook/Orange" to="." method="_on_orange_pressed"]
+[connection signal="pressed" from="PhoneBook/Yellow" to="." method="_on_yellow_pressed"]

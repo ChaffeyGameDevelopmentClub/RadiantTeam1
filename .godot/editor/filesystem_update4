@@ -1,5 +1,5 @@
 res://BoxingMG.tscn
 res://CleaningRoom.tscn
-res://Bed.gd
-res://SkillCheck.gd
-res://Book.gd
+res://EndCredits.tscn
+res://Assets/Yellow/Yellow Game/yellow_game.tscn
+res://Assets/Orange/Orange Game/orange_game.tscn

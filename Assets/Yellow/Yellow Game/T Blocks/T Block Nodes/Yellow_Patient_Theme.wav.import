@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bklitilgldg00"
+path="res://.godot/imported/Yellow_Patient_Theme.wav-3d1c6f30418869a7e61eebf7876ec2fb.sample"
+
+[deps]
+
+source_file="res://Assets/Yellow/Yellow Game/T Blocks/T Block Nodes/Yellow_Patient_Theme.wav"
+dest_files=["res://.godot/imported/Yellow_Patient_Theme.wav-3d1c6f30418869a7e61eebf7876ec2fb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
