@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci0i5ptvrvlnk"]
+
+[ext_resource type="Texture2D" uid="uid://rfrrehiunpyu" path="res://Assets/Yellow/Yellow Game/T Blocks/T1.png" id="1_kbe7w"]
+[ext_resource type="Script" path="res://Assets/Yellow/Yellow Game/T Blocks/T Block Nodes/block.gd" id="1_nhit0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8tdt"]
+size = Vector2(96, 24)
+
+[node name="T1" type="CharacterBody2D"]
+script = ExtResource("1_nhit0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -12)
+texture = ExtResource("1_kbe7w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_i8tdt")

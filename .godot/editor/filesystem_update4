@@ -1,3 +1,20 @@
 res://BoxingMG.tscn
 res://CleaningRoom.tscn
+<<<<<<< HEAD
 res://EndCredits.tscn
+=======
+res://Assets/Yellow/Yellow Game/yellow_game.tscn
+res://Assets/Yellow/Yellow Game/player_block.tscn
+res://Assets/Yellow/Yellow Game/T Blocks/T Block Nodes/T1.tscn
+res://Assets/Yellow/Yellow Game/T Blocks/T Block Nodes/T2.tscn
+res://Assets/Yellow/Yellow Game/T Blocks/T Block Nodes/T3.tscn
+res://Assets/Yellow/Yellow Game/T Blocks/T Block Nodes/T4.tscn
+res://Assets/Yellow/Yellow Game/T Blocks/T Block Nodes/T5.tscn
+res://Assets/Yellow/Yellow Game/T Blocks/T Block Nodes/T6.tscn
+res://Assets/Yellow/Yellow Game/T Blocks/T Block Nodes/T7.tscn
+res://Assets/Orange/Orange Game/orange_game.tscn
+res://Assets/Orange/Orange Game/orange_basket.tscn
+res://Assets/Orange/Orange Game/orange.tscn
+res://Assets/Orange/Orange Game/OrangeGraphic.gd
+res://Assets/Yellow/Yellow Game/player_block.gd
+>>>>>>> Quin/Programming
