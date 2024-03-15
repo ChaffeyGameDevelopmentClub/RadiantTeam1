@@ -4,17 +4,17 @@ var is_paused := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
+	
 	var Pause = false
 
-
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
+	
 	if Input.is_action_just_pressed("Pause"):
 		Pause_Menu()
 
-	
-	
-	
 func Pause_Menu():
 	if is_paused:
 		pause_button.hide()
@@ -24,7 +24,6 @@ func Pause_Menu():
 		Engine.time_scale = 0 
 	
 	is_paused = !is_paused
-
 
 
 func _on_red_pressed():
@@ -48,11 +47,11 @@ func _on_blue_pressed():
 	get_tree().change_scene()
 
 
-func Pause_Menu():
-	if Pause:
-		Pause.hide()
-		Engine.time_scale = 1 
-	else:
-		Pause.show()
-		Engine.time_scale = 0 
+#func Pause_Menu():
+	#if Pause:
+		#Pause.hide()
+		#Engine.time_scale = 1 
+	#else:
+		#Pause.show()
+		#Engine.time_scale = 0 
 	
