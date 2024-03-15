@@ -1,0 +1,120 @@
+[gd_scene load_steps=24 format=3 uid="uid://dk28qje72fe31"]
+
+[ext_resource type="Script" path="res://pause_button.gd" id="1_e7h0p"]
+[ext_resource type="Texture2D" uid="uid://pliqyr4uvm0f" path="res://Pause Option Logos Continue A .png" id="2_7e05w"]
+[ext_resource type="Texture2D" uid="uid://bakji7irnf3vf" path="res://Back To Title C.png" id="4_10sj6"]
+[ext_resource type="Texture2D" uid="uid://cg0ynphvhsl2" path="res://Back To Room.png" id="4_aejlo"]
+[ext_resource type="Texture2D" uid="uid://drbmbgi3yld5j" path="res://Pause Option Logos Quit.png" id="5_tfcud"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_db68j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_etggj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lo44f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j7hd5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q1evl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6cmbi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_krcbh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_15w8f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5ftg3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_olir6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5wvn0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_efopv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tsiy7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xw0dh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hbxv4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_egewe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ilkt2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lxjrq"]
+
+[node name="Pause_Button" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchor_right = 1.09
+anchor_bottom = 1.685
+offset_right = -499.68
+offset_bottom = -627.88
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e7h0p")
+
+[node name="Continue" type="Button" parent="."]
+visible = false
+layout_mode = 2
+offset_left = 26.0
+offset_top = 28.0
+offset_right = 298.0
+offset_bottom = 278.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_db68j")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_etggj")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lo44f")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_j7hd5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_q1evl")
+icon = ExtResource("2_7e05w")
+
+[node name="Level Selection" type="Button" parent="."]
+layout_mode = 2
+offset_left = 206.0
+offset_top = 77.0
+offset_right = 478.0
+offset_bottom = 327.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6cmbi")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_krcbh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_15w8f")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5ftg3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_olir6")
+icon = ExtResource("4_aejlo")
+
+[node name="Back To Tilte Screen" type="Button" parent="."]
+layout_mode = 2
+offset_left = 67.0
+offset_top = 225.0
+offset_right = 339.0
+offset_bottom = 475.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5wvn0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_efopv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tsiy7")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_xw0dh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hbxv4")
+icon = ExtResource("4_10sj6")
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 2
+offset_left = 375.0
+offset_top = 223.0
+offset_right = 647.0
+offset_bottom = 473.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_egewe")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ilkt2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lxjrq")
+icon = ExtResource("5_tfcud")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.224
+offset_left = 283.0
+offset_top = 76.0
+offset_right = 274.504
+offset_bottom = 1088.0
+
+[connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="Level Selection" to="." method="_on_level_selection_pressed"]
+[connection signal="pressed" from="Back To Tilte Screen" to="." method="_on_back_to_tilte_screen_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
